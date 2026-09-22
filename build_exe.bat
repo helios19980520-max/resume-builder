@@ -53,15 +53,22 @@ echo ==== [2/5] Baking API keys from .env ====
 
 echo.
 echo ==== [3/5] Installing Python dependencies (2-4 min first time) ====
+REM A copied .venv still exists on disk but its pyvenv.cfg points at another PC's Python.
+set "VENV_PY=%~dp0backend\.venv\Scripts\python.exe"
+if exist "%VENV_PY%" (
+  "%VENV_PY%" -c "import sys" >nul 2>&1 || (
+    echo Stale virtualenv ^(built on another PC^). Recreating it.
+    rmdir /s /q backend\.venv
+  )
+)
 if not exist backend\.venv %PY% -m venv backend\.venv || (echo [ERROR] could not create venv & goto :fail)
-call backend\.venv\Scripts\activate.bat
-python -m pip install --upgrade pip >> "%LOG%" 2>&1
-pip install -r backend\requirements.txt pyinstaller >> "%LOG%" 2>&1 || (echo [ERROR] pip install failed - see build_log.txt & goto :fail)
+"%VENV_PY%" -m pip install --upgrade pip >> "%LOG%" 2>&1
+"%VENV_PY%" -m pip install -r backend\requirements.txt pyinstaller >> "%LOG%" 2>&1 || (echo [ERROR] pip install failed - see build_log.txt & goto :fail)
 
 echo.
 echo ==== [4/5] Building the executable with PyInstaller (2-5 min) ====
 pushd backend
-pyinstaller --noconfirm --clean resume_builder.spec >> "%LOG%" 2>&1 || (popd & echo [ERROR] PyInstaller failed - see build_log.txt & goto :fail)
+"%VENV_PY%" -m PyInstaller --noconfirm --clean resume_builder.spec >> "%LOG%" 2>&1 || (popd & echo [ERROR] PyInstaller failed - see build_log.txt & goto :fail)
 popd
 
 echo.
