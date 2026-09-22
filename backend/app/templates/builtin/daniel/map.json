@@ -1,0 +1,847 @@
+{
+ "id": "daniel",
+ "source_name": "daniel.docx",
+ "name": "Compact Modern (Calibri)",
+ "description": "A dense, technology-focused full-stack resume with a graphic name banner, heading-styled section titles and long bulleted achievement lists under each role.",
+ "style_summary": "Very content-dense single-column layout that leads with a drawing/text-box name banner and compact contact details, then packs skills into slash-separated technology lines. Each job uses a three-line header (role + dates, company + location, then an italic 'Technical Scope' technology list) followed by a long run of achievement bullets with bolded metrics. Typography mixes Arial Black and Calibri Light at small sizes (10.5-12pt) for a modern engineering feel, with minimal white space and occasional project URLs. Best suited to senior software engineers who need to display broad tech stacks and quantified impact.",
+ "tone": "modern",
+ "best_for": [
+  "Full stack and frontend engineers",
+  "Startups and product companies",
+  "Roles that value many concrete achievements",
+  "Candidates with 4+ positions"
+ ],
+ "page": {
+  "width_in": 8.27,
+  "height_in": 11.69,
+  "margins_in": [
+   0.1,
+   0.19,
+   0.17,
+   0.15
+  ]
+ },
+ "fonts": {
+  "theme_major": "Cambria",
+  "theme_minor": "Calibri",
+  "explicit": {
+   "Arial Black": 8,
+   "Calibri Light": 8,
+   "Calibri": 5,
+   "Segoe UI": 4,
+   "Times New Roman": 2,
+   "Symbol": 1
+  }
+ },
+ "paragraphs": [
+  {
+   "idx": 0,
+   "role": "drawing",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 1,
+   "role": "heading_summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Summary"
+  },
+  {
+   "idx": 2,
+   "role": "summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 3,
+   "role": "heading_skills",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 4,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 5,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 6,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 7,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 8,
+   "role": "heading_experience",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Experience"
+  },
+  {
+   "idx": 9,
+   "role": "exp_header_1",
+   "pattern": "{role} – {start} to {end}",
+   "values": {
+    "role": "Lead Full Stack Engineer",
+    "start": "03/2024",
+    "end": "Present"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 10,
+   "role": "exp_header_2",
+   "pattern": "{company} ({location}) {remote}",
+   "values": {
+    "company": "Neural Internet",
+    "location": "US",
+    "remote": "Remote"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 11,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "React v19, React Router v6, React Hooks, Redux, Tailwind CSS, TypeScript, tRPC, GraphQL, Lang Chain (JS/TS), Supabase, Node.js, WebSockets, AWS EC2, S..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 12,
+   "role": "exp_subheading",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 13,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 14,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 15,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 16,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 17,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 18,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 19,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 20,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 21,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 22,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 23,
+   "role": "exp_header_1",
+   "pattern": "{role} - {start} to {end}\t",
+   "values": {
+    "role": "Senior React.js Developer",
+    "start": "08/2021",
+    "end": "03/2024"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 24,
+   "role": "exp_header_2",
+   "pattern": "{company} ({location}) {remote}",
+   "values": {
+    "company": "Betcloud",
+    "location": "Australia",
+    "remote": "Remote"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 25,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "HTML5, CSS3, DOM, TypeScript, React, Redux, Styled Components, Emotion, Stimulus and Tailwind CSS, MUI, Bootstrap, React Hook Node.js, Github CI/CD pi..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 26,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 27,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 28,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 29,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 30,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 31,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 32,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 33,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 34,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 35,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 36,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 37,
+   "role": "exp_url",
+   "pattern": "{website}",
+   "values": {
+    "website": "https://betcloud.com.au/"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 38,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 39,
+   "role": "exp_header_1",
+   "pattern": "{role}",
+   "values": {
+    "role": "Intermediate Software Engineer"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 40,
+   "role": "exp_header_2",
+   "pattern": "{company} ({location}) {remote} – {start} to {end}",
+   "values": {
+    "company": "MeCarreira",
+    "location": "Switzerland",
+    "remote": "Remote",
+    "start": "11/2019",
+    "end": "08/2021"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 41,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "React, Node.js, NestJS, TypeScript, Redux, Tailwind CSS, Web3.js, Ether.js, Wagmi, GraphQL, AWS EC2, S3, Parameter Store, MongoDB, PostgreSQL, React T..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 42,
+   "role": "exp_subheading",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 43,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 44,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 45,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 46,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 47,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 48,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 49,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 50,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 51,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 52,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 53,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 54,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 55,
+   "role": "exp_url",
+   "pattern": "{website}",
+   "values": {
+    "website": "https://mecarreira.com"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 56,
+   "role": "exp_header_1",
+   "pattern": "{role} - {start} to {end}",
+   "values": {
+    "role": "Junior Software Engineer",
+    "start": "01/2017",
+    "end": "12/2019"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 57,
+   "role": "exp_header_2",
+   "pattern": "{company} ({location}) {remote}",
+   "values": {
+    "company": "T/DG",
+    "location": "United States",
+    "remote": "Remote"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 58,
+   "role": "exp_scope",
+   "pattern": "Technical Scope {tech_scope}",
+   "values": {
+    "tech_scope": "Node.js, PostgreSQL, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Bootstrap, React, Redux, Electron, Element UI, Bootstrap, ASP.NET, C#, etc."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 59,
+   "role": "exp_subheading",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 60,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 61,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 62,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 63,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 64,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 65,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 66,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 67,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 68,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 69,
+   "role": "exp_url",
+   "pattern": "{website}",
+   "values": {
+    "website": "https://hrm.thedigitalgroup.com \nhttps://hrm-qa.thedigitalgroup.com\nhttps://hrm-staging.thedigitalgroup.com"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 70,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 71,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 72,
+   "role": "heading_education",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Education"
+  },
+  {
+   "idx": 73,
+   "role": "edu_line",
+   "pattern": "{degree}: {field} {years}",
+   "values": {
+    "degree": "Bachelor of Science",
+    "field": "Computer Science",
+    "years": "2013 - 2017"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 74,
+   "role": "edu_line",
+   "pattern": "{university}",
+   "values": {
+    "university": "THE UNIVERSITY OF SYDNEY"
+   },
+   "heading_text": ""
+  }
+ ],
+ "textbox_paragraphs": [
+  {
+   "idx": 0,
+   "role": "name_line",
+   "pattern": "{name}",
+   "values": {
+    "name": "Daniel Kakutani"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 1,
+   "role": "contact_line",
+   "pattern": "{location}",
+   "values": {
+    "location": "Tokyo, Japan"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 2,
+   "role": "contact_line",
+   "pattern": "# {email}",
+   "values": {
+    "email": "hades.mineva@gmail.com"
+   },
+   "heading_text": ""
+  }
+ ],
+ "texts": {
+  "0": "Daniel KakutaniTokyo, Japan# hades.mineva@gmail.comDaniel KakutaniTokyo, Japan# hades.mineva@gmail.com",
+  "1": "Summary ",
+  "2": " Full-Stack Engineer with 8+ years of experience specializing in Node.js, NestJS, React.js, and TypeScript to build scalable, high-performance web applications. Strong expertise in designing backend systems using PostgreSQL and modern patterns such as Controller-Service-Repository, while delivering responsive, intuitive frontends. Experienced in AWS (ECS, S3, Parameter Store), automated testing, CI/CD, and Agile practices. Passionate about mentoring junior developers, maintaining a clean codebase, and driving impactful features in collaborative, cross-functional teams. ",
+  "3": "",
+  "4": "React.js (v16 to v19) / Next.js / Angular.js / Flutter / React Hooks / Context API / Redux / RTK Query\nTailwind CSS / SASS/LESS / Bootstrap / MUI / Storybook (component-driven development)",
+  "5": "tRPC / RESTful APIs / GraphQL / HASURA / third-party SDK integrations",
+  "6": "React Testing Library / Cypress / Playwright / Jest (unit, functional & E2E testing)\nNode.js / Nest.js / Django / FastAPI / ASP.NET (C#) / Go / PostgreSQL / MySQL / MongoDB / MS SQL",
+  "7": "GCP / Azure DevOps / AWS (EC2, S3, ELB/ALB, CloudWatch, Parameter store) / GitHub Actions, Docker, Kubernetes, Jenkins / Cloud Run / Firestore / Cloud Storage / Pub/Sub / IAM\nOptimization of frontend performance (LCP/FCP) / responsive design / accessibility (WCAG) / SEO fundamentals",
+  "8": "Experience",
+  "9": "Lead Full Stack Engineer – 03/2024 to Present",
+  "10": "Neural Internet (US) Remote",
+  "11": "Technical Scope: React v19, React Router v6, React Hooks, Redux, Tailwind CSS, TypeScript, tRPC, GraphQL, Lang Chain (JS/TS), Supabase, Node.js, WebSockets, AWS EC2, S3, ECS, Parameter Store, Google Lighthouse, WebPageTest, Docker, Kubernetes, Azure DevOps, Jenkins, GitHub Actions, CI/CD pipeline development, PostgreSQL, SQL..",
+  "12": "Key Achievements:",
+  "13": "Developed 120+ reusable React components with Material UI, Tailwind CSS, and Bootstrap, ensuring pixel-perfect, responsive UIs aligned with Figma designs, and improving frontend consistency across the platform.",
+  "14": "Integrated user activity tracking and analytics (logins, uploads, requests) via Google Analytics dashboards, utilizing React Hooks and Redux to manage state and ensure real-time data flow.",
+  "15": "Optimized cloud resources on AWS (EC2, S3, CloudWatch, ECS, Parameter Store) for efficient deployments and cost-effective scaling, achieving a 40% improvement in performance by configuring Elastic Load Balancing (ELB) with React lazy-loading modules.",
+  "16": "Enhanced database performance by leveraging PostgreSQL and SQL to design and optimize relational schemas, enabling faster query execution and improved data consistency for large-scale applications.",
+  "17": "Implemented a CI/CD pipeline through GitHub Actions, automating deployment processes and improving code delivery speed by 30%.",
+  "18": "Led the integration of Node.js backend services with React frontends, developing AI-powered chat UIs using WebSockets and LangChain for real-time generative content.",
+  "19": "Integrated FastAPI backend with React to support streaming generative AI responses, enhancing real-time user interactions and improving engagement with AI-driven business content.",
+  "20": "Developed and maintained automated test suites (unit, integration, and property-based tests) to ensure robust, scalable features and minimize bugs in production environments.",
+  "21": "Collaborated closely with data scientists to integrate LLM pipelines into frontend workflows, streamlining AI-assisted content generation and analytics dashboards, improving team productivity by 25%.",
+  "22": "Optimized GPU rental API logic for horizontal scaling via Kubernetes, resulting in 60% better resource allocation for GPU-miner tasks, improving system efficiency and reducing latency.",
+  "23": "Senior React.js Developer - 08/2021 to 03/2024\t",
+  "24": "Betcloud (Australia) Remote ",
+  "25": "Technical Scope: HTML5, CSS3, DOM, TypeScript, React, Redux, Styled Components, Emotion, Stimulus and Tailwind CSS, MUI, Bootstrap, React Hook Node.js, Github CI/CD pipeline, Redux-saga, Webpack, Redux Tool Kit Query, Google Maps API, React-leaflet, React Testing Library, Cypress, Github Action, Docker, AWS  etc.",
+  "26": "Developed and scaled a leading iGaming Casino and Sportsbook platform, integrating AI-powered features such as predictive analytics for personalized betting experiences, real-time odds calculation, and AI-driven content recommendations.",
+  "27": "Engineered reusable React components for complex betting interfaces, including dynamic transaction dashboards and wallet connectors, leveraging state management (React Hooks, Redux) to create seamless and real-time user experiences across gaming modules.",
+  "28": "Integrated AI-driven features like chatbots and user inquiry classification, enhancing the platform's interactive features, alongside data visualizations for interactive game statistics and trading charts using AmCharts, ReCharts, and React-Leaflet.",
+  "29": "Optimized frontend performance with a focus on Core Web Vitals (LCP, CLS, and FID) and server-side rendering (SSR) using React/Next.js, which improved SEO rankings, organic traffic, and overall platform usability under high traffic conditions.",
+  "30": "Improved observability and logging for both frontend and backend services by integrating Google Cloud Logging, GitHub Actions CI/CD, and Docker for containerization and efficient deployment pipelines, enabling smooth collaboration across teams.",
+  "31": "Mentored junior engineers, promoting clean coding standards, SOLID principles, and AI integration techniques, ensuring scalable frontend architecture with an emphasis on AI model integration and high-quality production releases.",
+  "32": "Optimized Core Web Vitals (LCP, CLS, and FID) through code-splitting, lazy loading, and prefetching strategies, reducing page load times by over 40% and ensuring smoother navigation across casino and sportsbook modules.",
+  "33": "Implemented server-side rendering (SSR) and static site generation (SSG) with React/Next.js, improving crawlability, SEO rankings, and boosting organic traffic.",
+  "34": "Enhanced accessibility and semantic HTML structure, aligning with WCAG 2.1 standards, which improved Lighthouse scores for accessibility, performance, and SEO.",
+  "35": "Collaborated with designers and QA to fine-tune responsive layouts and mobile-first optimizations, achieving consistent experiences across browsers and devices.",
+  "36": "",
+  "37": "https://betcloud.com.au/",
+  "38": "",
+  "39": "Intermediate Software Engineer",
+  "40": "MeCarreira (Switzerland) Remote – 11/2019 to 08/2021",
+  "41": "Technical Scope: React, Node.js, NestJS, TypeScript, Redux, Tailwind CSS, Web3.js, Ether.js, Wagmi, GraphQL, AWS EC2, S3, Parameter Store, MongoDB, PostgreSQL, React Testing Library, Jest, Cypress, Three.js, D3.js, Chart.js, AmCharts..",
+  "42": "Key Achievements:",
+  "43": "",
+  "44": "Developed secure wallet connection and smart contract interaction using Node.js and Ether.js, enabling real-time staking, delegation, and token transactions within the dApp.",
+  "45": "Integrated 5+ third-party crypto exchange APIs (Uniswap, OKEX, Binance) to deliver accurate, real-time trading and liquidity data for user dashboards and staking features.",
+  "46": "Designed and implemented backend authentication layers using NestJS, providing secure API endpoints and integrating with relational and NoSQL databases like MongoDB and PostgreSQL for seamless data access.",
+  "47": "Utilized AWS services including EC2, S3, and Parameter Store to deploy backend services, store assets, and securely manage environment variables, ensuring high availability and optimal performance.",
+  "48": "Led the integration of AI-powered features into the frontend with React and TypeScript, building dynamic, data-driven dashboards and visualizations for user engagement.",
+  "49": "Applied Test-Driven Development (TDD) principles, writing unit tests, integration tests, and end-to-end tests using React Testing Library and Cypress, ensuring robust and maintainable software.",
+  "50": "Built and optimized interactive data visualizations using Three.js, D3.js, and Chart.js, enhancing the user experience with 3D metaverse-like UI components and detailed analytics dashboards.",
+  "51": "Collaborated with cross-functional teams to ensure smooth integration between backend (Node.js/NestJS) and frontend (React/Redux), aligning product features with business goals.",
+  "52": "Developed a scalable API architecture using GraphQL for flexible and efficient data queries, improving the user experience by reducing server requests.",
+  "53": "Played a key role in optimizing cloud-based infrastructure on AWS, reducing costs by implementing more efficient cloud resources, such as EC2 auto-scaling and load balancing.",
+  "54": " ",
+  "55": "https://mecarreira.com",
+  "56": "Junior Software Engineer - 01/2017 to 12/2019",
+  "57": "T/DG (United States) Remote",
+  "58": "Technical Scope Node.js, PostgreSQL, HTML5, CSS3, JavaScript (ES6+), Tailwind CSS, Bootstrap, React, Redux, Electron, Element UI, Bootstrap, ASP.NET, C#, etc.\n\nDeveloped HRMS Platform (Human Resource Management Platform) as a Junior Software Engineer and worked on full-stack across field improve technical skills mentoring Senior Staff Engineers in 8 members team called Chartbuster.",
+  "59": "Key Achievements:",
+  "60": "Developed a Human Resource Management System (HRMS) platform, leveraging HTML, CSS, and JavaScript (ES6+) to create 30+ responsive, user-friendly landing pages for both internal use and client-facing applications.",
+  "61": "Applied SOLID principles to ensure clean, maintainable code, and followed DRY principles to minimize code duplication and improve development efficiency.",
+  "62": "Migrated frontend components from Vue.js to react, integrating React Router and Redux for state management, improving the application’s scalability and performance.",
+  "63": "Independently developed and integrated the Advance Module, enabling employees to request monthly advances based on attendance, utilizing Node.js for backend logic and PostgreSQL for database interactions.",
+  "64": "Optimized PostgreSQL queries by designing 30+ relational database tables and writing 80+ stored procedures, improving data retrieval speeds and reducing the cost of queries for complex operations.",
+  "65": "Leveraged best practices in backend development using Node.js and PostgreSQL, ensuring that the platform could scale to handle increasing data and user load.",
+  "66": "Worked closely with Senior Staff Engineers, mentoring and collaborating on coding practices, feature design, and performance improvements, helping refine the technical architecture and backend processes.",
+  "67": "Participated actively in agile ceremonies (stand-ups, sprint planning, and retrospectives) and worked with the product team to refine user stories and deliver features aligned with business goals.",
+  "68": "It is still in development and growing bigger and bigger nowadays.",
+  "69": "https://hrm.thedigitalgroup.com \nhttps://hrm-qa.thedigitalgroup.com\nhttps://hrm-staging.thedigitalgroup.com",
+  "70": "",
+  "71": "",
+  "72": "Education",
+  "73": "Bachelor of Science: Computer Science 2013 - 2017",
+  "74": "THE UNIVERSITY OF SYDNEY"
+ },
+ "textbox_texts": {
+  "0": "Daniel Kakutani",
+  "1": "Tokyo, Japan",
+  "2": "# hades.mineva@gmail.com"
+ },
+ "experience": {
+  "first": 9,
+  "end": 72,
+  "block": [
+   {
+    "idx": 9,
+    "role": "exp_header_1"
+   },
+   {
+    "idx": 10,
+    "role": "exp_header_2"
+   },
+   {
+    "idx": 11,
+    "role": "exp_scope"
+   },
+   {
+    "idx": 12,
+    "role": "exp_subheading"
+   },
+   {
+    "idx": 13,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 14,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 15,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 16,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 17,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 18,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 19,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 20,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 21,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 22,
+    "role": "exp_bullet"
+   }
+  ],
+  "block_roles": [
+   "exp_header_1",
+   "exp_header_2",
+   "exp_scope",
+   "exp_subheading",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet"
+  ]
+ },
+ "budget": {
+  "summary_chars": 574,
+  "summary_tolerance": 0.08,
+  "skill_lines": 4,
+  "skill_line_chars": [
+   64,
+   288
+  ],
+  "skill_labelled": false,
+  "total_bullets": 39,
+  "bullets_per_job_original": [
+   10,
+   10,
+   10,
+   9
+  ],
+  "bullet_chars": [
+   61,
+   259
+  ],
+  "bullet_avg": 189,
+  "tech_scope_chars": [
+   230,
+   389
+  ],
+  "blurb_chars": null,
+  "bold_keywords": true,
+  "voice": "Achievement bullets starting with a past-tense verb; one sentence, sometimes two; concrete component names and numbers. Wrap 2-4 key technologies/outcomes per bullet in **double asterisks**."
+ },
+ "features": {
+  "prose": false,
+  "bold_keywords": true,
+  "labelled_skills": false,
+  "has_textbox_header": true,
+  "has_scope": true,
+  "has_blurb": false,
+  "jobs_in_original": 4,
+  "summary_chars": 574,
+  "skill_lines": 4,
+  "avg_bullet_chars": 189
+ },
+ "builtin": true,
+ "map_version": 2
+}

@@ -1,0 +1,15 @@
+.env
+data/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/fonts/*.ttf
+backend/fonts/*.ttc
+backend/fonts/*.TTF
+bundled_keys.py
+backend/static/
+backend/build/
+backend/dist/
+backend/.venv/

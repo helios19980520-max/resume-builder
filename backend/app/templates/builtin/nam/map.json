@@ -1,0 +1,682 @@
+{
+ "id": "nam",
+ "source_name": "nam.docx",
+ "name": "Classic Teal (Cambria)",
+ "description": "A Cambria-serif, single-column engineering resume with a bold title, underlined section headings and dense bulleted achievement lists.",
+ "style_summary": "Dense and information-rich, this single-column layout uses the Cambria serif family throughout with a large title-styled name line and compact small-caps company headers aligned to right-hand date stamps. Each role opens with a 'Technical Scope:' stack line followed by eight to ten tightly packed achievement bullets, so it favours substance over whitespace. The colour palette is essentially monochrome with subtle heading accents, giving a restrained, technical tone. Best suited to mid-to-senior software engineers who need to show deep, tool-heavy delivery history on one continuous page flow.",
+ "tone": "classic",
+ "best_for": [
+  "Full stack / backend / frontend engineers",
+  "Cloud and DevOps roles",
+  "Mid to senior individual contributors",
+  "Fintech, SaaS, marketplaces"
+ ],
+ "page": {
+  "width_in": 8.5,
+  "height_in": 11.0,
+  "margins_in": [
+   0.7,
+   0.8,
+   0.8,
+   0.8
+  ]
+ },
+ "fonts": {
+  "theme_major": "Cambria",
+  "theme_minor": "Cambria",
+  "explicit": {
+   "Symbol": 6,
+   "Cambria": 1
+  }
+ },
+ "paragraphs": [
+  {
+   "idx": 0,
+   "role": "name_line",
+   "pattern": "{name} ({headline})",
+   "values": {
+    "name": "Nam Nguyen",
+    "headline": "Senior Full Stack Engineer"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 1,
+   "role": "contact_line",
+   "pattern": "{location} | {email}",
+   "values": {
+    "location": "Vietnam",
+    "email": "mg.illas23n@gmail.com"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 2,
+   "role": "heading_summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": "About me"
+  },
+  {
+   "idx": 3,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 4,
+   "role": "summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 5,
+   "role": "heading_skills",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Skills & Abilities"
+  },
+  {
+   "idx": 6,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 7,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 8,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 9,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 10,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 11,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 12,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 13,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 14,
+   "role": "heading_experience",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Experience"
+  },
+  {
+   "idx": 15,
+   "role": "exp_header_1",
+   "pattern": "{company} ({location})\t\t\t\t           \t        \t        {dates}",
+   "values": {
+    "company": "Fintos venture Group",
+    "location": "Malaysia",
+    "dates": "Jan 2024 –present"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 16,
+   "role": "exp_header_2",
+   "pattern": "{role}",
+   "values": {
+    "role": "Senior Full Stack Engineer"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 17,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "React.js, TypeScript, Redux, Node.js, Express, Prisma ORM, MySQL, GraphQL, Firebase, Tailwind CSS, Storybook, Jest, React Testing Library, GitHub Acti..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 18,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 19,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 20,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 21,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 22,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 23,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 24,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 25,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 26,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 27,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 28,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 29,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 30,
+   "role": "exp_header_1",
+   "pattern": "{company} ({location})\t\t\t\t           \t        \t      {dates}",
+   "values": {
+    "company": "Deliverme pty.ltd",
+    "location": "australia",
+    "dates": "APR 2021 –DEc 2023"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 31,
+   "role": "exp_header_2",
+   "pattern": "{role}",
+   "values": {
+    "role": "Full Stack Engineer"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 32,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "React.js, React Native, Node.js, Styled Components, Redux Toolkit, React Query, Docker, WebSockets, REST APIs, Playwright, PostgreSQL, Nginx, AWS load..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 33,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 34,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 35,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 36,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 37,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 38,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 39,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 40,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 41,
+   "role": "exp_url",
+   "pattern": "( {website})",
+   "values": {
+    "website": "https://www.deliver-me.com.au"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 42,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 43,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 44,
+   "role": "exp_header_1",
+   "pattern": "{company} ({location})\t\t\t\t\t\t  \t     \t\t      {dates}",
+   "values": {
+    "company": "foriio",
+    "location": "japan",
+    "dates": "aug 2017 – Mar 2021"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 45,
+   "role": "exp_header_2",
+   "pattern": "{role}",
+   "values": {
+    "role": "Full Stack Developer"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 46,
+   "role": "exp_scope",
+   "pattern": "Technical Scope: {tech_scope}",
+   "values": {
+    "tech_scope": "React.js, TypeScript, React Hooks, Context API, Redux, Tailwind CSS, Styled Components, Node.js (Express), RESTful APIs, PostgreSQL, Google Analytics,..."
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 47,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 48,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 49,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 50,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 51,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 52,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 53,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 54,
+   "role": "exp_url",
+   "pattern": "({website})",
+   "values": {
+    "website": "https://foriio.com/"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 55,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 56,
+   "role": "heading_education",
+   "pattern": "",
+   "values": {},
+   "heading_text": "Education"
+  },
+  {
+   "idx": 57,
+   "role": "edu_line",
+   "pattern": "{degree} | {end_year} |",
+   "values": {
+    "degree": "Bachelor of computer Science",
+    "end_year": "2017"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 58,
+   "role": "edu_line",
+   "pattern": "{university}",
+   "values": {
+    "university": "hanoi university of science and technology"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 59,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  }
+ ],
+ "textbox_paragraphs": [],
+ "texts": {
+  "0": "Nam Nguyen (Senior Full Stack Engineer)",
+  "1": "Vietnam | mg.illas23n@gmail.com",
+  "2": "About me",
+  "3": "",
+  "4": "  Senior Full Stack Engineer with over 8 years of experience designing, building, and delivering scalable, secure, and high-performance web applications. Experienced in both frontend frameworks (React.js, Next.js) and backend technologies (Node.js, Express), and also AWS, GCP, with expertise in API design, state management, cloud infrastructure, and CI/CD pipelines. Proven track record in leading distributed teams, implementing robust design systems, and optimizing applications for performance, accessibility (WCAG), and user experience across Fintech, SaaS, and creative commerce platforms. Passionate about building end-to-end solutions that seamlessly integrate frontend, backend, and cloud-native deployments, while mentoring teams to deliver high-quality, maintainable code.",
+  "5": "",
+  "6": "React.js / Next.js / Javascript / TypeScript / Redux / Redux Toolkit / Context API",
+  "7": "Tailwind CSS / Styled Components / Material UI / Ant Design / ShadCN UI / Hero UI",
+  "8": "React Hooks / Component Virtualization / Code Splitting ",
+  "9": "Node.js / Express / NestJS\t\t",
+  "10": "Jest / React Testing Library",
+  "11": "MySQL / PostgreSQL / Supabase / Firebase / RESTful API / GraphQL ",
+  "12": "AWS services (EC2 / Load Balancer / Elasticsearch / S3 Storage / OAuth / ASG / Cloudwatch / IAM / RDS …), GCP services.",
+  "13": "Github Action / CI&CD / Docker / Gitlab / Github / Figma /  Kanban / Jira / Linear /  Production KPI Integration / Google Analytics etc.",
+  "14": "Experience",
+  "15": "Fintos venture Group (Malaysia)\t\t\t\t           \t        \t        Jan 2024 –present",
+  "16": "  Senior Full Stack Engineer",
+  "17": "Technical Scope: React.js, TypeScript, Redux, Node.js, Express, Prisma ORM, MySQL, GraphQL, Firebase, Tailwind CSS, Storybook, Jest, React Testing Library, GitHub Actions, AWS",
+  "18": "Developed and optimized responsive web applications for Fintos’s financing and mortgage advisory platform using React.js, significantly improving customer onboarding speed and loan application completion rates.\n(https://imoney.imortgage2u.com, https://imoney-uat.imortgage2u.com)",
+  "19": "Built reusable UI component libraries and integrated real-time analytics dashboards for property financing insights, improving transparency for clients and financial advisors.",
+  "20": "Redesigned backend services using Node.js (Express) and Prisma ORM, implementing clean, type-safe data access layers that improved API performance and maintainability across the loan workflow, credit scoring modules, and advisory services.",
+  "21": "Engineered RESTful APIs supporting end-to-end loan processing, automated eligibility checks, credit scoring logic, and advisor workflows, resulting in faster response times and a more reliable user experience.",
+  "22": "Integrated critical third-party services including eKYC identity verification, payment gateways, and property valuation APIs, reducing manual verification and approval time by 30%.",
+  "23": "Designed and managed a fully normalized relational schema using Prisma with MySQL, improving query efficiency and ensuring data integrity for loan applications, property records, and user profiles.",
+  "24": "Implemented secure authentication and authorization with JWT-based access control and role-based permissions, strengthening compliance with financial regulations and industry security requirements.",
+  "25": "Migrated and deployed Fintos’s core applications to AWS, leveraging EC2, RDS, S3, CloudFront, and load balancers to improve scalability, uptime, and operational reliability.",
+  "26": "Optimized AWS infrastructure costs by monitoring workloads with CloudWatch, fine-tuning resource allocation, and introducing autoscaling policies that reduced operational overhead.",
+  "27": "Mentored junior and intern developers through pair programming, code reviews, and technical guidance, fostering clean coding practices and consistent delivery across the team. ",
+  "28": "",
+  "29": "",
+  "30": "Deliverme pty.ltd (australia)\t\t\t\t           \t        \t      APR 2021 –DEc 2023",
+  "31": "  Full Stack Engineer",
+  "32": "Technical Scope: React.js, React Native, Node.js, Styled Components, Redux Toolkit, React Query, Docker, WebSockets, REST APIs, Playwright, PostgreSQL, Nginx, AWS load balancing, AWS EC2, AWS cloudwatch, AWS IAM ",
+  "33": "Architected and implemented scalable solutions aligned with DeliverMe’s mission to optimize delivery operations, enabling real-time order tracking and efficient route management for drivers.",
+  "34": "Developed a modular, component-driven frontend with so many reusable components, improving development speed and ensuring a consistent, high-quality user experience across web and mobile dashboards.",
+  "35": "Implemented real-time delivery updates and driver tracking using WebSockets, reducing data latency and providing instant feedback to customers and operational teams.",
+  "36": "Optimized PostgreSQL database schemas and queries for high-volume endpoints, leveraging indexing, partitioning, and query optimization to reduce average response time from 400ms to 150ms.",
+  "37": "Designed and implemented a driver assignment and load-balancing system, intelligently distributing orders based on location, traffic, and historical performance, improving on-time deliveries.",
+  "38": "Developed microservice-based modules for payment processing, notifications, and analytics, ensuring maintainable and extensible backend architecture.",
+  "39": "Implemented centralized logging and monitoring using AWS CloudWatch and custom middleware, enabling proactive issue detection and improving system reliability without impacting performance.",
+  "40": "",
+  "41": "( https://www.deliver-me.com.au)",
+  "42": "",
+  "43": "",
+  "44": "foriio (japan)\t\t\t\t\t\t  \t     \t\t      aug 2017 – Mar 2021",
+  "45": " Full Stack Developer",
+  "46": "Technical Scope: React.js, TypeScript, React Hooks, Context API, Redux, Tailwind CSS, Styled Components, Node.js (Express), RESTful APIs, PostgreSQL, Google Analytics, AWS (EC2, S3, Auto Scaling Group, CloudWatch, Load Balancer, IAM), CI/CD (GitHub Actions)",
+  "47": "Refactored the whole codebase to follow the best practices of development which enhances the platform performance and by implementing React, Redux Modernization and Performance Optimization.",
+  "48": "Integrated specific and important track event like daily login count, request created or work uploads like events to Google Analytics KPI sheet to track the user activity and performance update of work.",
+  "49": "Developed and maintained backend services using Node.js (Express) and PostgreSQL, implementing RESTful APIs for project management, user authentication, and payment flow between creators and clients.",
+  "50": "Suggested and Implemented independent Management of creators & clients system to avoid the money chasing issue as like all other job market platforms for Creative Commerce V2 which enables client to connect with talented creators for some project development purpose.",
+  "51": "Enable centralized logging for the production server Auto Scaling Group by implementing AWS Cloudwatch Logs integration to provide centralized, searchable application logs with proper retention policies and structured logging for better observability.",
+  "52": "Implemented Multi-file converting and uploading feature to enhance the user experience while the users are uploading their previous works to their portfolio using the pre-signed URL which is auto generated from AWS S3.",
+  "53": "",
+  "54": "(https://foriio.com/)",
+  "55": "",
+  "56": "Education",
+  "57": "Bachelor of computer Science | 2017 | ",
+  "58": "hanoi university of science and technology",
+  "59": ""
+ },
+ "textbox_texts": {},
+ "experience": {
+  "first": 15,
+  "end": 56,
+  "block": [
+   {
+    "idx": 15,
+    "role": "exp_header_1"
+   },
+   {
+    "idx": 16,
+    "role": "exp_header_2"
+   },
+   {
+    "idx": 17,
+    "role": "exp_scope"
+   },
+   {
+    "idx": 18,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 19,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 20,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 21,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 22,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 23,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 24,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 25,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 26,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 27,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 28,
+    "role": "blank"
+   },
+   {
+    "idx": 29,
+    "role": "blank"
+   }
+  ],
+  "block_roles": [
+   "exp_header_1",
+   "exp_header_2",
+   "exp_scope",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "blank",
+   "blank"
+  ]
+ },
+ "budget": {
+  "summary_chars": 782,
+  "summary_tolerance": 0.08,
+  "skill_lines": 8,
+  "skill_line_chars": [
+   21,
+   141
+  ],
+  "skill_labelled": false,
+  "total_bullets": 23,
+  "bullets_per_job_original": [
+   10,
+   7,
+   6
+  ],
+  "bullet_chars": [
+   144,
+   284
+  ],
+  "bullet_avg": 200,
+  "tech_scope_chars": [
+   170,
+   262
+  ],
+  "blurb_chars": null,
+  "bold_keywords": false,
+  "voice": "Achievement bullets starting with a past-tense verb; one sentence, sometimes two; concrete component names and numbers."
+ },
+ "features": {
+  "prose": false,
+  "bold_keywords": false,
+  "labelled_skills": false,
+  "has_textbox_header": false,
+  "has_scope": true,
+  "has_blurb": false,
+  "jobs_in_original": 3,
+  "summary_chars": 782,
+  "skill_lines": 8,
+  "avg_bullet_chars": 200
+ },
+ "builtin": true,
+ "map_version": 2
+}

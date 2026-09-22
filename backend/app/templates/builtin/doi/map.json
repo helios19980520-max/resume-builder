@@ -1,0 +1,555 @@
+{
+ "id": "doi",
+ "source_name": "doi.docx",
+ "name": "Executive Blue (Gill Sans)",
+ "description": "A single-column Cambria resume with bold uppercase section headings, labelled skill lines, and job entries combining a two-line header, an italic company blurb, and dense achievement bullets.",
+ "style_summary": "Dense, text-heavy layout that favours substantive prose bullets over terse one-liners, making it well suited to deep technical storytelling. Formatting is conservative: serif Cambria body text, uppercase bold section headings with rule-like emphasis, and indented skill lines prefixed by bold category labels. Each role carries a pipe-separated header with bracketed company, location, and dates plus an italic employer description, giving context before the achievements. Best for senior individual contributors in engineering-heavy fields who need space to explain technical depth.",
+ "tone": "executive",
+ "best_for": [
+  "Senior and staff engineers",
+  "Systems, performance, infrastructure roles",
+  "Prose-heavy technical storytelling",
+  "Research-adjacent and deep-tech companies"
+ ],
+ "page": {
+  "width_in": 8.5,
+  "height_in": 11.0,
+  "margins_in": [
+   0.7,
+   0.8,
+   0.8,
+   0.8
+  ]
+ },
+ "fonts": {
+  "theme_major": "Cambria",
+  "theme_minor": "Cambria",
+  "explicit": {
+   "Gill Sans MT": 12
+  }
+ },
+ "paragraphs": [
+  {
+   "idx": 0,
+   "role": "name_line",
+   "pattern": "{name}",
+   "values": {
+    "name": "Yusuke Doi"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 1,
+   "role": "contact_line",
+   "pattern": "{location} | {email}",
+   "values": {
+    "location": "Japan  – Open to Remote Worldwide",
+    "email": "go.high.520@gmail.com"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 2,
+   "role": "heading_summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": "PROFESSIONAL SUMMARY"
+  },
+  {
+   "idx": 3,
+   "role": "summary",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 4,
+   "role": "heading_skills",
+   "pattern": "",
+   "values": {},
+   "heading_text": "TECHNICAL SKILLS"
+  },
+  {
+   "idx": 5,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 6,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 7,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 8,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 9,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 10,
+   "role": "skill_line",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 11,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 12,
+   "role": "heading_experience",
+   "pattern": "",
+   "values": {},
+   "heading_text": "PROFESSIONAL EXPERIENCE"
+  },
+  {
+   "idx": 13,
+   "role": "exp_header_1",
+   "pattern": "{role} | [{company}]\n[{location}] | [{dates}]",
+   "values": {
+    "role": "Senior GPU Engineer",
+    "company": "BeamNG",
+    "location": "Germany, Remote",
+    "dates": "2024 – Present"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 14,
+   "role": "exp_blurb",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 15,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 16,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 17,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 18,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 19,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 20,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 21,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 22,
+   "role": "exp_header_1",
+   "pattern": "{role} | [{company}]\n[{location}] | [{dates}]",
+   "values": {
+    "role": "Senior Software Engineer",
+    "company": "NVIDIA GK",
+    "location": "Japan, Hybrid",
+    "dates": "2022 – 2024"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 23,
+   "role": "exp_blurb",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 24,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 25,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 26,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 27,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 28,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 29,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 30,
+   "role": "exp_header_1",
+   "pattern": "{role} | [{company}]\n[{location}] | [{dates}]",
+   "values": {
+    "role": "Graphics / Engine Programmer",
+    "company": "Independent Game Technology Studio",
+    "location": "Japan, Remote",
+    "dates": "2018 – 2021"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 31,
+   "role": "exp_blurb",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 32,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 33,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 34,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 35,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 36,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 37,
+   "role": "exp_header_1",
+   "pattern": "{role} | [{company}]\n[{location}] | [{dates}]",
+   "values": {
+    "role": "Software Engineer",
+    "company": "Google (intern)",
+    "location": "US, Remote",
+    "dates": "2018 – 2021"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 38,
+   "role": "exp_blurb",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 39,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 40,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 41,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 42,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 43,
+   "role": "exp_bullet",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 44,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 45,
+   "role": "blank",
+   "pattern": "",
+   "values": {},
+   "heading_text": ""
+  },
+  {
+   "idx": 46,
+   "role": "heading_education",
+   "pattern": "",
+   "values": {},
+   "heading_text": "EDUCATION"
+  },
+  {
+   "idx": 47,
+   "role": "edu_line",
+   "pattern": "{university}",
+   "values": {
+    "university": "National University of Singapore (NUS)"
+   },
+   "heading_text": ""
+  },
+  {
+   "idx": 48,
+   "role": "edu_line",
+   "pattern": "{degree} in {field}",
+   "values": {
+    "degree": "Bachelor’s Degree",
+    "field": "Computer Science"
+   },
+   "heading_text": ""
+  }
+ ],
+ "textbox_paragraphs": [],
+ "texts": {
+  "0": "Yusuke Doi",
+  "1": "Japan  – Open to Remote Worldwide | go.high.520@gmail.com",
+  "2": "PROFESSIONAL SUMMARY",
+  "3": "Senior GPU and systems engineer with 8+ years of experience across real-time simulation, graphics, high-performance computing, and low-level C++ development. Most of my recent work has been in CUDA and modern C++, profiling compute-heavy workloads and getting more predictable performance out of GPU pipelines. Earlier work included game-engine graphics, distributed compute services, and rendering infrastructure. Comfortable moving between kernel code, host-side scheduling, build systems, profiling traces, and production debugging.",
+  "4": "TECHNICAL SKILLS\t",
+  "5": "Languages: C++17/20, CUDA C++, Python, Rust, C, GLSL, WGSL, Bash",
+  "6": "Frameworks: CUDA Runtime & Driver APIs, Thrust, CUB, Vulkan, OpenGL, WebGPU, DirectX 12, OpenMP, Intel TBB, Boost, gRPC",
+  "7": "Databases: PostgreSQL, Redis, SQLite",
+  "8": "Cloud / Infrastructure: Linux, Docker, Kubernetes, AWS, GCP, NVIDIA GPU containers, Terraform",
+  "9": "Testing / Observability: GoogleTest, Catch2, NVIDIA Nsight Compute, Nsight Systems, RenderDoc, Tracy Profiler, Linux perf, AddressSanitizer, ThreadSanitizer",
+  "10": "Tools / Practices: CMake, Ninja, Bazel, Git, GitLab CI, GitHub Actions, Jenkins, Conan, SIMD, multithreading, lock-free programming, compute shaders, GPU performance analysis",
+  "11": "",
+  "12": "PROFESSIONAL EXPERIENCE",
+  "13": "Senior GPU Engineer | [BeamNG]\n[Germany, Remote] | [2024 – Present]",
+  "14": "Simulation technology company building physically detailed real-time vehicle environments and tools used across gaming, research, and engineering use cases. I work close to the performance boundary between simulation and rendering, mostly on GPU compute, C++ engine code, profiling, and systems that need to remain predictable under heavy real-time workloads.",
+  "15": "Developed CUDA C++ kernels for simulation-side processing, including sensor data, spatial queries, large-array transforms, and GPU-assisted preprocessing. The surrounding engine code is C++20, with explicit buffer ownership and asynchronous execution rather than treating the GPU as a synchronous accelerator. ",
+  "16": "Profiled several long-running kernels with Nsight Compute and Nsight Systems and found a mix of uncoalesced loads, register pressure, and avoidable synchronization. Reworking data layout and splitting one overly general kernel reduced its GPU time by roughly 35% on our main benchmark scene. ",
+  "17": "Built host/device pipelines using CUDA streams, events, pinned memory, CUB, and asynchronous transfers. Some workloads benefited from kernel fusion; others became slower because occupancy dropped, so changes stayed benchmark-driven rather than assuming fewer launches were always better. ",
+  "18": "Worked on Vulkan/OpenGL interop for sharing simulation buffers with rendering without unnecessary CPU copies. Debugging that layer involved the usual mix of validation messages, RenderDoc captures, synchronization mistakes, and bugs that disappeared when validation was turned on. ",
+  "19": "Added a small WebGPU/WGSL visualization path for browser-based engineering tools that display simulation output without requiring the full desktop renderer. Kept the shader logic simpler than the native path because portability across browsers and adapters mattered more than squeezing out the last few percent. ",
+  "20": "Regular work includes CMake, Ninja, GoogleTest, Catch2, Tracy, Linux perf, Docker, GitLab CI, code reviews, benchmark maintenance, and documenting performance investigations so changes are reproducible instead of becoming “this was faster on my machine” folklore.",
+  "21": "",
+  "22": "Senior Software Engineer | [NVIDIA GK]\n[Japan, Hybrid] | [2022 – 2024]",
+  "23": "GPU computing and graphics technology organization working on performance-sensitive software across compute and visualization workloads. I focused on CUDA kernel development, profiling, host/runtime interaction, and portability across multiple GPU generations.",
+  "24": "Developed and tuned CUDA C++ kernels for dense and sparse numerical workloads, image processing, reductions, scans, and custom data transforms. Used CUB and Thrust selectively, but kept custom kernels where data layout or synchronization requirements made the generic primitives awkward. ",
+  "25": "Spent a lot of time in Nsight Compute looking at memory throughput, occupancy, branch efficiency, warp stalls, shared-memory behavior, and instruction mix. One bandwidth-heavy pipeline improved by around 1.7× after changing its memory layout and removing an intermediate global-memory round trip. ",
+  "26": "Worked across multiple GPU architectures and maintained benchmark suites to catch regressions caused by assumptions that happened to work well on one generation. Kernel launch configuration, cache behavior, and register use were treated as architecture-sensitive rather than fixed constants. ",
+  "27": "Built asynchronous processing paths using CUDA streams, CUDA Graphs, events, pinned buffers, and multi-GPU scheduling. The surrounding codebase mixed C++ and Python bindings so researchers and application teams could use the same lower-level kernels without duplicating implementations. ",
+  "28": "Maintained testing and delivery tooling with GoogleTest, Python/Pytest, CMake, Bazel, Docker, Jenkins, Git, and Linux. Also reviewed performance changes from other engineers, wrote profiling notes, and investigated the occasional issue that turned out to be host-side contention rather than GPU execution.",
+  "29": "",
+  "30": "Graphics / Engine Programmer | [Independent Game Technology Studio]\n[Japan, Remote] | [2018 – 2021]",
+  "31": "Small independent game-technology studio developing rendering, simulation, and tooling for real-time 3D projects. I owned a broad section of the native engine stack, which meant graphics programming one week and build, threading, or asset-pipeline problems the next.",
+  "32": "Built rendering and compute features in C++17, Vulkan, OpenGL, GLSL, and later WebGPU/WGSL, covering deferred lighting, shadows, post-processing, particles, culling, and GPU-driven scene data. ",
+  "33": "Moved particle simulation and several visibility calculations from CPU workers into compute shaders, which freed meaningful CPU time on scenes with large numbers of dynamic objects. Used RenderDoc and Tracy heavily because frame-level regressions were often caused by synchronization rather than shader arithmetic. ",
+  "34": "Worked on the engine’s job system using TBB, atomics, lock-free queues, and SIMD, with separate worker pools for rendering preparation, asset loading, and simulation. Used ThreadSanitizer for races that were nearly impossible to reproduce from logs. ",
+  "35": "Maintained CMake/Conan, Windows and Linux builds, shader compilation, GitHub Actions, asset tooling in Python, and a small SQLite-backed editor metadata store. There was no dedicated tools team, so engine work included whatever was blocking artists and designers that week.",
+  "36": "",
+  "37": "Software Engineer | [Google (intern)]\n[US, Remote] | [2018 – 2021]",
+  "38": "Large-scale technology company operating distributed compute and developer infrastructure. I worked on C++ services and performance tooling used around compute-intensive internal workloads, which is where I first became seriously interested in profiling and heterogeneous execution.",
+  "39": "Developed C++ components for task execution, data movement, and resource accounting in a distributed compute environment. Work involved multithreading, RPCs, memory management, and failure handling more often than user-facing product code. ",
+  "40": "Built profiling and benchmark utilities in C++ and Python for CPU-heavy workloads, using Linux perf and internal telemetry to separate algorithmic bottlenecks from scheduling, I/O, and memory behavior. ",
+  "41": "Contributed to an early GPU-backed processing path for selected numerical workloads, working with CUDA, host/device buffer management, batching, and basic kernel profiling. This was a smaller part of the role than my later GPU work, but it established the foundation I built on afterward. ",
+  "42": "Worked with gRPC, Protocol Buffers, Bazel, Docker, Kubernetes, PostgreSQL, and Redis in supporting services and test environments. ",
+  "43": "Routine responsibilities included design reviews, unit tests, production debugging, CI maintenance, code review, and writing short technical notes when behavior crossed several components and was not obvious from the code alone.",
+  "44": "",
+  "45": "",
+  "46": "EDUCATION",
+  "47": "National University of Singapore (NUS)",
+  "48": "Bachelor’s Degree in Computer Science "
+ },
+ "textbox_texts": {},
+ "experience": {
+  "first": 13,
+  "end": 46,
+  "block": [
+   {
+    "idx": 13,
+    "role": "exp_header_1"
+   },
+   {
+    "idx": 14,
+    "role": "exp_blurb"
+   },
+   {
+    "idx": 15,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 16,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 17,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 18,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 19,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 20,
+    "role": "exp_bullet"
+   },
+   {
+    "idx": 21,
+    "role": "blank"
+   }
+  ],
+  "block_roles": [
+   "exp_header_1",
+   "exp_blurb",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "exp_bullet",
+   "blank"
+  ]
+ },
+ "budget": {
+  "summary_chars": 535,
+  "summary_tolerance": 0.08,
+  "skill_lines": 6,
+  "skill_line_chars": [
+   31,
+   179
+  ],
+  "skill_labelled": true,
+  "total_bullets": 20,
+  "bullets_per_job_original": [
+   6,
+   5,
+   4,
+   5
+  ],
+  "bullet_chars": [
+   125,
+   319
+  ],
+  "bullet_avg": 266,
+  "tech_scope_chars": null,
+  "blurb_chars": [
+   255,
+   364
+  ],
+  "bold_keywords": false,
+  "voice": "Achievement bullets starting with a past-tense verb; one sentence, sometimes two; concrete component names and numbers."
+ },
+ "features": {
+  "prose": false,
+  "bold_keywords": false,
+  "labelled_skills": true,
+  "has_textbox_header": false,
+  "has_scope": false,
+  "has_blurb": true,
+  "jobs_in_original": 4,
+  "summary_chars": 535,
+  "skill_lines": 6,
+  "avg_bullet_chars": 266
+ },
+ "builtin": true,
+ "map_version": 2
+}

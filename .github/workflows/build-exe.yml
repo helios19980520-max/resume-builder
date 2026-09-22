@@ -1,0 +1,47 @@
+# Builds ResumeBuilder.exe on a Windows runner and attaches it as a downloadable artifact.
+# Add repository secrets ANTHROPIC_API_KEY and TAVILY_API_KEY to bake default keys into the build
+# (leave them out to ship a build where users enter keys in Settings).
+name: build-windows-exe
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Build web UI
+        working-directory: frontend
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+      - name: Stage static files
+        run: |
+          Copy-Item -Recurse -Force frontend/dist backend/static
+        shell: pwsh
+
+      - name: Bake keys
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: python tools/bake_keys.py
+
+      - name: Install Python deps
+        working-directory: backend
+        run: |
+          pip install -r requirements.txt pyinstaller
+      - name: PyInstaller
+        working-directory: backend
+        run: pyinstaller --noconfirm --clean resume_builder.spec
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ResumeBuilder-windows
+          path: backend/dist/ResumeBuilder.exe

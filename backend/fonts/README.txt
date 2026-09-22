@@ -1,0 +1,1 @@
+Place optional Microsoft fonts here (cambria.ttc, calibri.ttf, GIL_____.TTF, ariblk.ttf, segoeui.ttf) for pixel-identical PDFs. Free metric-compatible fallbacks (Caladea/Carlito) are installed by default.

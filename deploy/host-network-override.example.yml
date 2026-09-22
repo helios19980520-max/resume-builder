@@ -1,0 +1,16 @@
+# For servers where Docker bridge networking is blocked by host firewalls (nftables/Tailscale).
+# cp deploy/host-network-override.example.yml docker-compose.override.yml ; also create nginx-host.conf (below)
+services:
+  backend:
+    network_mode: host
+    ports: !override []
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5151"]
+  frontend:
+    network_mode: host
+    ports: !override []
+    volumes:
+      - ./nginx-host.conf:/etc/nginx/conf.d/default.conf:ro
+# nginx-host.conf:
+#   server { listen 3333; root /usr/share/nginx/html; index index.html; client_max_body_size 20m;
+#     location /api/ { proxy_pass http://127.0.0.1:5151/api/; proxy_read_timeout 900s; proxy_set_header Host $host; }
+#     location / { try_files $uri /index.html; } }

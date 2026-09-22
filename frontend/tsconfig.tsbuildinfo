@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/steps/analysis.tsx","./src/steps/profile.tsx","./src/steps/progress.tsx","./src/steps/result.tsx","./src/steps/settingsmodal.tsx","./src/steps/setup.tsx","./src/steps/templatecard.tsx"],"version":"5.9.3"}

@@ -1,0 +1,197 @@
+Build started Tue 09/22/2026 22:24:23.18 
+
+up to date in 7s
+
+> resume-builder-frontend@1.0.0 build
+> tsc -b && vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 39 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.58 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
+[2mdist/[22m[35massets/index-D-Bu4rbF.css  [39m[1m[2m  8.74 kB[22m[1m[22m[2m │ gzip:  2.57 kB[22m
+[2mdist/[22m[36massets/index-i_I1EO_r.js   [39m[1m[2m168.51 kB[22m[1m[22m[2m │ gzip: 53.29 kB[22m
+[32m✓ built in 613ms[39m
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in C:\Users\user\AppData\Roaming\Python\Python314\site-packages (26.2.1)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pyinstaller
+  Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
+Collecting fastapi==0.115.* (from -r backend\requirements.txt (line 1))
+  Downloading fastapi-0.115.14-py3-none-any.whl.metadata (27 kB)
+Collecting uvicorn==0.30.* (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading uvicorn-0.30.6-py3-none-any.whl.metadata (6.6 kB)
+Collecting pydantic==2.* (from -r backend\requirements.txt (line 3))
+  Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting python-docx==1.2.* (from -r backend\requirements.txt (line 4))
+  Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting anthropic>=0.60 (from -r backend\requirements.txt (line 5))
+  Downloading anthropic-1.7.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting tavily-python>=0.5 (from -r backend\requirements.txt (line 6))
+  Downloading tavily_python-0.8.4-py3-none-any.whl.metadata (14 kB)
+Collecting httpx>=0.27 (from -r backend\requirements.txt (line 7))
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting beautifulsoup4>=4.12 (from -r backend\requirements.txt (line 8))
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting python-dotenv>=1.0 (from -r backend\requirements.txt (line 9))
+  Downloading python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
+Collecting python-multipart>=0.0.9 (from -r backend\requirements.txt (line 10))
+  Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting pymupdf>=1.24 (from -r backend\requirements.txt (line 11))
+  Downloading pymupdf-1.28.2-cp310-abi3-win_amd64.whl.metadata (26 kB)
+Collecting pywin32>=306 (from -r backend\requirements.txt (line 12))
+  Downloading pywin32-312-cp314-cp314-win_amd64.whl.metadata (11 kB)
+Collecting starlette<0.47.0,>=0.40.0 (from fastapi==0.115.*->-r backend\requirements.txt (line 1))
+  Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi==0.115.*->-r backend\requirements.txt (line 1))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting click>=7.0 (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting annotated-types>=0.6.0 (from pydantic==2.*->-r backend\requirements.txt (line 3))
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic==2.*->-r backend\requirements.txt (line 3))
+  Downloading pydantic_core-2.46.5-cp314-cp314-win_amd64.whl.metadata (6.7 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic==2.*->-r backend\requirements.txt (line 3))
+  Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting lxml>=3.1.0 (from python-docx==1.2.*->-r backend\requirements.txt (line 4))
+  Downloading lxml-6.1.3-cp314-cp314-win_amd64.whl.metadata (3.4 kB)
+Collecting anyio<5,>=3.6.2 (from starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1))
+  Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting colorama>=0.4 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting httptools>=0.5.0 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading httptools-0.8.0-cp314-cp314-win_amd64.whl.metadata (3.7 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading pyyaml-6.0.3-cp314-cp314-win_amd64.whl.metadata (2.4 kB)
+Collecting watchfiles>=0.13 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
+  Downloading websockets-17.1-cp314-cp314-win_amd64.whl.metadata (6.5 kB)
+Collecting altgraph (from pyinstaller)
+  Downloading altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: packaging>=22.0 in C:\Users\user\AppData\Roaming\Python\Python314\site-packages (from pyinstaller) (26.3)
+Collecting pefile>=2022.5.30 (from pyinstaller)
+  Downloading pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller)
+  Downloading pyinstaller_hooks_contrib-2026.7-py3-none-any.whl.metadata (16 kB)
+Collecting pywin32-ctypes>=0.2.1 (from pyinstaller)
+  Downloading pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting setuptools>=42.0.0 (from pyinstaller)
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting docstring-parser<1,>=0.15 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting httpx2<3,>=2.0.0 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading httpx2-2.13.0-py3-none-any.whl.metadata (10 kB)
+Collecting jiter<1,>=0.4.0 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading jiter-0.17.0-cp314-cp314-win_amd64.whl.metadata (5.3 kB)
+Collecting sniffio<2,>=1 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting httpcore2==2.13.0 (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading httpcore2-2.13.0-py3-none-any.whl.metadata (26 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5))
+  Downloading truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
+Collecting requests (from tavily-python>=0.5->-r backend\requirements.txt (line 6))
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting tiktoken>=0.5.1 (from tavily-python>=0.5->-r backend\requirements.txt (line 6))
+  Downloading tiktoken-0.14.0-cp314-cp314-win_amd64.whl.metadata (6.8 kB)
+Collecting certifi (from httpx>=0.27->-r backend\requirements.txt (line 7))
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx>=0.27->-r backend\requirements.txt (line 7))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12->-r backend\requirements.txt (line 8))
+  Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting regex (from tiktoken>=0.5.1->tavily-python>=0.5->-r backend\requirements.txt (line 6))
+  Downloading regex-2026.9.10-cp314-cp314-win_amd64.whl.metadata (41 kB)
+Collecting charset_normalizer<4,>=2 (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6))
+  Downloading charset_normalizer-3.5.1-cp314-cp314-win_amd64.whl.metadata (46 kB)
+Collecting urllib3<3,>=1.26 (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6))
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Downloading fastapi-0.115.14-py3-none-any.whl (95 kB)
+Downloading uvicorn-0.30.6-py3-none-any.whl (62 kB)
+Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+Downloading pydantic_core-2.46.5-cp314-cp314-win_amd64.whl (2.0 MB)
+   ---------------------------------------- 2.0/2.0 MB 5.5 MB/s  0:00:00
+Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
+   ---------------------------------------- 1.5/1.5 MB 7.9 MB/s  0:00:00
+Downloading anthropic-1.7.0-py3-none-any.whl (1.3 MB)
+   ---------------------------------------- 1.3/1.3 MB 10.5 MB/s  0:00:00
+Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Downloading httpx2-2.13.0-py3-none-any.whl (95 kB)
+Downloading httpcore2-2.13.0-py3-none-any.whl (83 kB)
+Downloading jiter-0.17.0-cp314-cp314-win_amd64.whl (227 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading tavily_python-0.8.4-py3-none-any.whl (24 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Downloading pymupdf-1.28.2-cp310-abi3-win_amd64.whl (19.8 MB)
+   ---------------------------------------- 19.8/19.8 MB 10.8 MB/s  0:00:01
+Downloading pywin32-312-cp314-cp314-win_amd64.whl (7.0 MB)
+   ---------------------------------------- 7.0/7.0 MB 10.2 MB/s  0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httptools-0.8.0-cp314-cp314-win_amd64.whl (92 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading lxml-6.1.3-cp314-cp314-win_amd64.whl (4.1 MB)
+   ---------------------------------------- 4.1/4.1 MB 9.8 MB/s  0:00:00
+Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
+Downloading pyinstaller_hooks_contrib-2026.7-py3-none-any.whl (459 kB)
+Downloading pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Downloading pyyaml-6.0.3-cp314-cp314-win_amd64.whl (156 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+Downloading tiktoken-0.14.0-cp314-cp314-win_amd64.whl (988 kB)
+   ---------------------------------------- 988.0/988.0 kB 6.8 MB/s  0:00:00
+Downloading truststore-0.10.4-py3-none-any.whl (18 kB)
+Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Downloading websockets-17.1-cp314-cp314-win_amd64.whl (217 kB)
+Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading regex-2026.9.10-cp314-cp314-win_amd64.whl (281 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.1-cp314-cp314-win_amd64.whl (204 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Installing collected packages: altgraph, websockets, urllib3, typing-extensions, truststore, soupsieve, sniffio, setuptools, regex, pyyaml, pywin32-ctypes, pywin32, python-multipart, python-dotenv, pymupdf, pyinstaller-hooks-contrib, pefile, lxml, jiter, idna, httptools, h11, docstring-parser, colorama, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, requests, python-docx, pyinstaller, pydantic-core, httpcore2, httpcore, beautifulsoup4, anyio, watchfiles, tiktoken, starlette, pydantic, httpx2, httpx, tavily-python, fastapi, anthropic
+  WARNING: The script websockets.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts pywin32_postinstall.exe and pywin32_testall.exe are installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script dotenv.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script pymupdf.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script idna.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script normalizer.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script uvicorn.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts pyi-archive_viewer.exe, pyi-bindepend.exe, pyi-grab_version.exe, pyi-makespec.exe, pyi-set_version.exe and pyinstaller.exe are installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script watchfiles.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script httpx2.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script httpx.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script fastapi.exe is installed in 'C:\Users\user\AppData\Roaming\Python\Python314\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+Successfully installed altgraph-0.17.5 annotated-types-0.8.0 anthropic-1.7.0 anyio-4.15.1 beautifulsoup4-4.15.0 certifi-2026.7.22 charset_normalizer-3.5.1 click-8.5.0 colorama-0.4.6 docstring-parser-0.18.0 fastapi-0.115.14 h11-0.16.0 httpcore-1.0.9 httpcore2-2.13.0 httptools-0.8.0 httpx-0.28.1 httpx2-2.13.0 idna-3.20 jiter-0.17.0 lxml-6.1.3 pefile-2024.8.26 pydantic-2.13.5 pydantic-core-2.46.5 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.7 pymupdf-1.28.2 python-docx-1.2.0 python-dotenv-1.2.3 python-multipart-0.0.32 pywin32-312 pywin32-ctypes-0.2.3 pyyaml-6.0.3 regex-2026.9.10 requests-2.34.2 setuptools-84.0.0 sniffio-1.3.1 soupsieve-2.9.2 starlette-0.46.2 tavily-python-0.8.4 tiktoken-0.14.0 truststore-0.10.4 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 uvicorn-0.30.6 watchfiles-1.3.0 websockets-17.1
+'pyinstaller' is not recognized as an internal or external command,
+operable program or batch file.
