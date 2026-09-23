@@ -19,11 +19,23 @@ from typing import Any
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
+from ..humanize import drop_em_dashes
 from ..models import Experience, ResumeContent
 from .engine import BR, TAB, Para, TemplateDoc, donor_rpr_by_text, md_segments, rewrite_inplace, strip_md
 
 SEP_RE = re.compile(r"^[\s|·•,;:–—\-/()\[\]]*$")
 TOKEN_RE = re.compile(r"\{(\w+)\}")
+_REMOTE_WORD = re.compile(r"\bremote\b", re.I)
+# Joiner (and an opening bracket) that only existed to introduce a placeholder we are dropping.
+_BEFORE_EMPTY = re.compile(r"(?:[\s|·•,;:–—/\-]*[\(\[][\s|·•,;:–—/\-]*|[\s|·•,;:–—/\-]+)$")
+
+
+def display_location(location: str, remote: bool) -> str:
+    """Location as printed on the resume. A checked remote box sits on the right: 'US, Remote'."""
+    loc = (location or "").strip().rstrip(",").strip()
+    if remote and not _REMOTE_WORD.search(loc):
+        loc = f"{loc}, Remote" if loc else "Remote"
+    return loc
 
 
 # --------------------------------------------------------------------------- variables
@@ -45,8 +57,11 @@ def _vars_header(c: ResumeContent) -> dict[str, str]:
 
 
 def _vars_exp(e: Experience, values: dict) -> dict[str, str]:
-    return {"company": e.company, "location": e.location, "remote": "Remote" if e.remote else "", "role": e.role,
-            "start": e.start, "end": e.end, "dates": _dates(e.start, e.end, values.get("dates")),
+    # "Remote" is part of the location ("Japan, Remote"). The separate {remote} token stays empty
+    # so a template that also has one does not print it a second time.
+    return {"company": e.company, "location": display_location(e.location, e.remote), "remote": "",
+            "role": e.role, "start": e.start, "end": e.end,
+            "dates": _dates(e.start, e.end, values.get("dates")),
             "tech_scope": e.tech_scope, "website": e.website}
 
 
@@ -61,9 +76,51 @@ def _vars_edu(c: ResumeContent, values: dict) -> dict[str, str]:
             "start_year": ed.start_year, "end_year": ed.end_year, "years": yrs}
 
 
-# --------------------------------------------------------------------------- pattern -> segments
-def pattern_segments(proto, pattern: str, values: dict, vars: dict[str, str]) -> list:
-    """Tokenise the pattern; drop empty placeholders together with one adjacent separator."""
+def _is_sep(tok: dict | None) -> bool:
+    return bool(tok and "lit" in tok and tok["lit"].strip() and SEP_RE.match(tok["lit"]))
+
+
+def _drop_at(tokens: list, tok: dict) -> None:
+    for k, item in enumerate(tokens):
+        if item is tok:
+            del tokens[k]
+            return
+
+
+def _trim_before_empty(tokens: list, lit_token: dict) -> None:
+    """Drop the joiner that introduced an empty field, and keep a bracket that closed the previous one."""
+    trimmed = _BEFORE_EMPTY.sub("", lit_token["lit"])
+    if trimmed:
+        lit_token["lit"] = trimmed
+    else:
+        _drop_at(tokens, lit_token)
+
+
+def _drop_empty_placeholder(tokens: list, i: int) -> None:
+    """Remove an empty placeholder without eating the bracket or separator that belongs to a neighbour."""
+    nxt = tokens[i + 1] if i + 1 < len(tokens) else None
+    prv = tokens[i - 1] if i > 0 else None
+    after = tokens[i + 2] if i + 2 < len(tokens) else None
+    del tokens[i]
+    nxt_sep = _is_sep(nxt)
+    prv_sep = _is_sep(prv)
+    closer = bool(nxt_sep and re.fullmatch(r"[\s)\]]+", nxt["lit"]))
+    if closer or (nxt_sep and after is not None and "key" in after):
+        # A following field keeps its own joiner (" – {start}"). A closing bracket wraps this empty field.
+        if closer:
+            _drop_at(tokens, nxt)
+        if prv_sep:
+            _trim_before_empty(tokens, prv)
+        return
+    if nxt_sep:
+        _drop_at(tokens, nxt)
+        return
+    if prv_sep:
+        _trim_before_empty(tokens, prv)
+
+
+def resolve_tokens(pattern: str, values: dict, vars: dict[str, str]) -> list[dict]:
+    """Tokenise a header pattern and drop empty placeholders."""
     pattern = pattern.replace("\\t", "\t").replace("\\n", "\n")
     tokens: list[dict] = []
     pos = 0
@@ -74,31 +131,19 @@ def pattern_segments(proto, pattern: str, values: dict, vars: dict[str, str]) ->
         pos = m.end()
     if pos < len(pattern):
         tokens.append({"lit": pattern[pos:]})
-    if not tokens:
-        return [(pattern, "")]
 
-    # resolve values, mark empties
     for t in tokens:
         if "key" in t:
             t["text"] = vars.get(t["key"], "")
             t["orig"] = str(values.get(t["key"], "") or "")
-            # follow the template's casing convention (e.g. "ALEX MORGAN" -> uppercase names)
             letters = re.sub(r"[^A-Za-z]", "", t["orig"])
             if len(letters) >= 3 and letters.isupper() and t["key"] in ("name", "company", "university", "role"):
                 t["text"] = t["text"].upper()
-    # remove empty placeholders + one separator neighbour
     i = 0
     while i < len(tokens):
         t = tokens[i]
         if "key" in t and not t["text"]:
-            nxt = tokens[i + 1] if i + 1 < len(tokens) else None
-            prv = tokens[i - 1] if i > 0 else None
-            del tokens[i]
-            if nxt is not None and "lit" in nxt and SEP_RE.match(nxt["lit"]) and nxt["lit"].strip():
-                tokens.remove(nxt)
-            elif prv is not None and "lit" in prv and SEP_RE.match(prv["lit"]) and prv["lit"].strip():
-                tokens.remove(prv)
-                i -= 1
+            _drop_empty_placeholder(tokens, i)
             continue
         i += 1
     # collapse doubled separators left behind (e.g. " | " " | ")
@@ -113,13 +158,29 @@ def pattern_segments(proto, pattern: str, values: dict, vars: dict[str, str]) ->
     for t in tokens:
         if "lit" in t and SEP_RE.match(t["lit"]):
             t["lit"] = re.sub(r"(\s*[|·•]\s*){2,}", lambda m: m.group(1), t["lit"])
-    # trailing/leading pure separators
     while tokens and "lit" in tokens[0] and SEP_RE.match(tokens[0]["lit"]) and tokens[0]["lit"].strip(" ") and "\t" not in tokens[0]["lit"]:
         if tokens[0]["lit"].strip() in ("(", "["):
             break
         tokens.pop(0)
     while tokens and "lit" in tokens[-1] and SEP_RE.match(tokens[-1]["lit"]) and tokens[-1]["lit"].strip() and tokens[-1]["lit"].strip() not in (")", "]", "|"):
         tokens.pop()
+    return tokens
+
+
+def pattern_text(pattern: str, values: dict, vars: dict[str, str]) -> str:
+    return "".join(t.get("text", t.get("lit", "")) for t in resolve_tokens(pattern, values, vars))
+
+
+# --------------------------------------------------------------------------- pattern -> segments
+def pattern_segments(proto, pattern: str, values: dict, vars: dict[str, str]) -> list:
+    """Tokenise the pattern; drop empty placeholders together with the joiner that belonged to them."""
+    tokens = resolve_tokens(pattern, values, vars)
+    if not tokens:
+        # A pattern with no placeholders (or an empty one) is kept. A pattern whose
+        # placeholders were all empty should disappear, not print "{remote}".
+        if TOKEN_RE.search(pattern):
+            return []
+        return [(pattern, "")]
 
     segs: list = []
     last_rpr = None
@@ -234,7 +295,7 @@ class GenericTemplate:
             elif role == "summary":
                 if not summary_done:
                     lead = re.match(r"^\s*", self.map["texts"][str(p["idx"])]).group(0)
-                    A(Para.plain(key, lead + strip_md(c.summary)))
+                    A(Para.plain(key, lead + strip_md(drop_em_dashes(c.summary))))
                     summary_done = True
             elif role == "skill_line":
                 if not skills_done:
@@ -289,16 +350,16 @@ class GenericTemplate:
                         A(self._pat(pmap, ev, td))
                 elif role == "exp_blurb":
                     if e.company_blurb:
-                        A(Para.plain(key, strip_md(e.company_blurb)))
+                        A(Para.plain(key, strip_md(drop_em_dashes(e.company_blurb))))
                 elif role == "exp_subheading":
                     A(Para.plain(key, self.map["texts"][str(b["idx"])].strip()))
                 elif role == "exp_bullet":
                     if not bullets_emitted:
                         for bl in e.bullets:
                             if self.map["budget"]["bold_keywords"]:
-                                A(Para(key, md_segments(bl)))
+                                A(Para(key, md_segments(drop_em_dashes(bl))))
                             else:
-                                A(Para.plain(key, strip_md(bl)))
+                                A(Para.plain(key, strip_md(drop_em_dashes(bl))))
                         bullets_emitted = True
                     bullet_i += 1
                 elif role == "exp_url":

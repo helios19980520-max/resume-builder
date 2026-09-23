@@ -13,7 +13,7 @@ import re
 from typing import Callable
 
 from . import config, llm
-from .humanize import HUMAN_RULES, find_flags
+from .humanize import HUMAN_RULES, drop_em_dashes, find_flags
 from .models import Experience, JDIntel, ProfileInput, ResumeContent, SkillLine
 from .templates.engine import strip_md
 from .templates.registry import TemplateSpec
@@ -251,6 +251,16 @@ def _keyword_problems(intel: JDIntel | None, content: ResumeContent, limit: int 
             "(rewrite that bullet naturally, keep its length within budget); skip any that would be a lie"]
 
 
+def _without_em_dashes(c: ResumeContent) -> ResumeContent:
+    """Safety net after the rewrite pass: an em dash never ships, even if the model left one."""
+    c.summary = drop_em_dashes(c.summary)
+    c.headline = drop_em_dashes(c.headline)
+    for e in c.experiences:
+        e.company_blurb = drop_em_dashes(e.company_blurb)
+        e.bullets = [drop_em_dashes(b) for b in e.bullets]
+    return c
+
+
 def _fix_loop(spec: TemplateSpec, content: ResumeContent, profile: ProfileInput, progress: Progress,
               rounds: int = 3, intel: JDIntel | None = None) -> ResumeContent:
     for r in range(rounds):
@@ -268,7 +278,7 @@ def _fix_loop(spec: TemplateSpec, content: ResumeContent, profile: ProfileInput,
             + "\n\nReturn the complete corrected JSON object with the same schema.",
             model=config.CLAUDE_MODEL if r == 0 else config.CLAUDE_FAST_MODEL, max_tokens=12000)
         content = _parse_content(data, profile)
-    return content
+    return _without_em_dashes(content)
 
 
 def write_resume(spec: TemplateSpec, intel: JDIntel, profile: ProfileInput, company_profiles: dict[str, str],

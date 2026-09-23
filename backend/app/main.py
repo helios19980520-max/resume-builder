@@ -17,7 +17,9 @@ from .models import (AnalyzeRequest, GenerateRequest, ReviseRequest, SelectTempl
                      SettingsRequest)
 from .render import RenderUnavailable, capabilities, docx_preview_png, docx_to_pdf, pdf_pages
 from .templates.analyzer import TemplateError
+from .humanize import drop_em_dashes
 from .templates.engine import strip_md, visible_text
+from .templates.generic import display_location
 from .templates.registry import add_template, delete_template, get_template, list_templates, render_docx
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
@@ -293,17 +295,17 @@ def preview_html(sid: str):
         return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", e(s))
     parts = [f"<h1>{e(c.full_name)}</h1><div class='sub'>{e(c.headline)}</div>",
              f"<div class='sub'>{e(' | '.join(x for x in (c.location, c.contact.email, c.contact.phone, c.contact.linkedin) if x))}</div>",
-             f"<h2>Summary</h2><p>{e(strip_md(c.summary))}</p>", "<h2>Skills</h2><ul>"]
+             f"<h2>Summary</h2><p>{e(strip_md(drop_em_dashes(c.summary)))}</p>", "<h2>Skills</h2><ul>"]
     parts += [f"<li>{('<b>' + e(s.label) + ':</b> ') if s.label else ''}{e(s.items)}</li>" for s in c.skills]
     parts.append("</ul><h2>Experience</h2>")
     for x in c.experiences:
-        loc = ", ".join(v for v in (x.location, "Remote" if x.remote else "") if v)
+        loc = display_location(x.location, x.remote)
         parts.append(f"<h3>{e(x.role)} · {e(x.company)}{(' (' + e(loc) + ')') if loc else ''} <span>{e(x.start)} – {e(x.end)}</span></h3>")
         if x.company_blurb:
-            parts.append(f"<p class='blurb'>{e(x.company_blurb)}</p>")
+            parts.append(f"<p class='blurb'>{e(drop_em_dashes(x.company_blurb))}</p>")
         if x.tech_scope:
             parts.append(f"<p class='scope'><b>Technical Scope:</b> {e(x.tech_scope)}</p>")
-        parts.append("<ul>" + "".join(f"<li>{md(b)}</li>" for b in x.bullets) + "</ul>")
+        parts.append("<ul>" + "".join(f"<li>{md(drop_em_dashes(b))}</li>" for b in x.bullets) + "</ul>")
     ed = c.education
     parts.append(f"<h2>Education</h2><p><b>{e(ed.university)}</b><br>{e(ed.degree)} in {e(ed.field)} {e(ed.start_year)}{' – ' if ed.start_year and ed.end_year else ''}{e(ed.end_year)}</p>")
     css = ("body{font-family:Cambria,Georgia,serif;max-width:780px;margin:24px auto;padding:0 20px;color:#222;line-height:1.45}"

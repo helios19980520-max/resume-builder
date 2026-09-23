@@ -46,7 +46,8 @@ BAD_PRONOUNS = re.compile(r"\b(you|your|yours|they|their|them|he|she|his|her)\b"
 PATTERNS = [
     (re.compile(r"\bnot only\b.*\bbut also\b", re.I), "'not only ... but also' construction"),
     (re.compile(r"\bin today'?s\b", re.I), "'in today's ...' opener"),
-    (re.compile(r"—[^—]*—[^—]*—", re.I), "three or more em dashes in one item"),
+    (re.compile(r"—|\s--\s|(?<=[A-Za-z])\s+–\s+(?=[A-Za-z])"),
+     "em dash (rewrite the aside as a grammatical sentence, such as '. That is ...'; do not just replace — with a comma)"),
     (re.compile(r"\bresulting in\b", re.I), "'resulting in' outcome clause (use a plain verb + number)"),
     (re.compile(r"\bthereby\b", re.I), "'thereby'"),
     (re.compile(r"\bwhile (also )?(ensuring|maintaining|fostering|driving)\b", re.I), "'while ensuring/maintaining...' tail"),
@@ -94,6 +95,53 @@ def find_flags(text: str) -> list[str]:
     return out
 
 
+_EM_DASH = re.compile(r"\s*(?:—|--)\s*|(?<=[A-Za-z])\s+–\s+(?=[A-Za-z])")
+_FINITE = re.compile(
+    r"\b(is|are|was|were|has|have|had|do|does|did|built|kept|added|owned|worked|took|ran|went|made|fixed|wrote|used|showed|became|left|found|cut|moved|rewrote)\b",
+    re.I,
+)
+_REL = re.compile(r"\b(where|when|which|who|that)\b", re.I)
+
+
+def _noun_phrase_aside(right: str) -> bool:
+    """True when the text after the dash has no main verb, so a comma would leave a fragment."""
+    head = _REL.split(right, maxsplit=1)[0].split(",")[0]
+    return _FINITE.search(head) is None
+
+
+def _join_aside(left: str, right: str) -> str:
+    left = left.rstrip(" ,;:")
+    right = right.strip()
+    if not right:
+        return left
+    glue = " " if left.endswith((".", "!", "?")) else ". "
+    if _noun_phrase_aside(right):
+        if right[0].isupper() and not right.startswith(("I", "I'")):
+            right = right[0].lower() + right[1:]
+        if not right.endswith((".", "!", "?")):
+            right += "."
+        return f"{left}{glue}That is {right}"
+    if right[0].islower():
+        right = right[0].upper() + right[1:]
+    return f"{left}{glue}{right}"
+
+
+def drop_em_dashes(text: str) -> str:
+    """Rewrite an em-dash aside into a sentence. A bare comma is not a substitute.
+
+    'failures — the part of the month' becomes 'failures. That is the part of the month.'
+    A full clause after the dash becomes its own sentence. Hyphens in 'real-time' stay,
+    and date ranges like '2020 – 2024' stay.
+    """
+    if not text or not _EM_DASH.search(text):
+        return text
+    parts = _EM_DASH.split(text)
+    out = parts[0].rstrip()
+    for right in parts[1:]:
+        out = _join_aside(out, right)
+    return re.sub(r"\s{2,}", " ", out).strip()
+
+
 def readability(text: str) -> dict:
     sentences = [s for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
     words = re.findall(r"[A-Za-z][A-Za-z'\-]*", text)
@@ -122,4 +170,10 @@ HUMAN_RULES = """WRITING RULES (hard constraints - the output is checked mechani
    is realistic. Vary sentence openers; do not start more than two consecutive bullets with the same verb.
 6. Use normal everyday vocabulary ("fixed", "moved", "rewrote", "cut", "added", "found", "kept") instead of
    inflated verbs. Mention trade-offs or things that did not work once in a while - that is how people write.
-7. Use each ATS keyword naturally where it is true for the role; never keyword-stuff a sentence."""
+7. Use each ATS keyword naturally where it is true for the role; never keyword-stuff a sentence.
+8. Never use an em dash (—) or a spaced double hyphen (--). Do not merely swap it for a comma; that leaves a fragment.
+   Wrong: "payout failures — the part of the month where money has to land on time."
+   Wrong: "payout failures, the part of the month where money has to land on time."
+   Right: "payout failures. That is the part of the month where money has to land on time."
+   If the words after the dash are already a full clause, give them their own sentence.
+   Hyphens inside a word (real-time, multi-currency) are fine. Date ranges keep their en dash."""

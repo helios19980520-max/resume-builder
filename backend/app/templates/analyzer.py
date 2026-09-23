@@ -368,9 +368,10 @@ def build_map(docx_path: str, inv: dict, cls: dict, template_id: str, source_nam
         "blurb_chars": rng(blurb_lens, 200, 380) if blurb_lens else None,
         "bold_keywords": bold_kw,
         "voice": ("First-person prose paragraphs (2-3 sentences) that read like an engineer talking about the work; "
-                  "'I' allowed but sparse." if prose else
+                  "'I' allowed but sparse. No em dashes." if prose else
                   "Achievement bullets starting with a past-tense verb; one sentence, sometimes two; concrete component "
-                  "names and numbers." + (" Wrap 2-4 key technologies/outcomes per bullet in **double asterisks**." if bold_kw else "")),
+                  "names and numbers. No em dashes."
+                  + (" Wrap 2-4 key technologies/outcomes per bullet in **double asterisks**." if bold_kw else "")),
     }
 
     return {

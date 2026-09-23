@@ -1,6 +1,6 @@
-Build started Tue 09/22/2026 23:43:49.57 
+Build started Wed 09/23/2026 12:03:08.92 
 
-up to date in 496ms
+up to date in 7s
 
 > resume-builder-frontend@1.0.0 build
 > tsc -b && vite build
@@ -13,173 +13,64 @@ computing gzip size...
 [2mdist/[22m[32mindex.html                 [39m[1m[2m  0.58 kB[22m[1m[22m[2m │ gzip:  0.36 kB[22m
 [2mdist/[22m[35massets/index-D-Bu4rbF.css  [39m[1m[2m  8.74 kB[22m[1m[22m[2m │ gzip:  2.57 kB[22m
 [2mdist/[22m[36massets/index-i_I1EO_r.js   [39m[1m[2m168.51 kB[22m[1m[22m[2m │ gzip: 53.29 kB[22m
-[32m✓ built in 471ms[39m
-Requirement already satisfied: pip in d:\workspaces\resume-builder\backend\.venv\lib\site-packages (25.3)
-Collecting pip
-  Using cached pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
-Using cached pip-26.2.1-py3-none-any.whl (1.8 MB)
-Installing collected packages: pip
-  Attempting uninstall: pip
-    Found existing installation: pip 25.3
-    Uninstalling pip-25.3:
-      Successfully uninstalled pip-25.3
-Successfully installed pip-26.2.1
-Collecting pyinstaller
-  Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
-Collecting fastapi==0.115.* (from -r backend\requirements.txt (line 1))
-  Using cached fastapi-0.115.14-py3-none-any.whl.metadata (27 kB)
-Collecting uvicorn==0.30.* (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached uvicorn-0.30.6-py3-none-any.whl.metadata (6.6 kB)
-Collecting pydantic==2.* (from -r backend\requirements.txt (line 3))
-  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
-Collecting python-docx==1.2.* (from -r backend\requirements.txt (line 4))
-  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
-Collecting anthropic>=0.60 (from -r backend\requirements.txt (line 5))
-  Downloading anthropic-1.8.0-py3-none-any.whl.metadata (3.3 kB)
-Collecting tavily-python>=0.5 (from -r backend\requirements.txt (line 6))
-  Using cached tavily_python-0.8.4-py3-none-any.whl.metadata (14 kB)
-Collecting httpx>=0.27 (from -r backend\requirements.txt (line 7))
-  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
-Collecting beautifulsoup4>=4.12 (from -r backend\requirements.txt (line 8))
-  Using cached beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
-Collecting python-dotenv>=1.0 (from -r backend\requirements.txt (line 9))
-  Using cached python_dotenv-1.2.3-py3-none-any.whl.metadata (29 kB)
-Collecting python-multipart>=0.0.9 (from -r backend\requirements.txt (line 10))
-  Using cached python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
-Collecting pymupdf>=1.24 (from -r backend\requirements.txt (line 11))
-  Using cached pymupdf-1.28.2-cp310-abi3-win_amd64.whl.metadata (26 kB)
-Collecting pywin32>=306 (from -r backend\requirements.txt (line 12))
-  Using cached pywin32-312-cp314-cp314-win_amd64.whl.metadata (11 kB)
-Collecting starlette<0.47.0,>=0.40.0 (from fastapi==0.115.*->-r backend\requirements.txt (line 1))
-  Using cached starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
-Collecting typing-extensions>=4.8.0 (from fastapi==0.115.*->-r backend\requirements.txt (line 1))
-  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
-Collecting click>=7.0 (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
-Collecting h11>=0.8 (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
-Collecting annotated-types>=0.6.0 (from pydantic==2.*->-r backend\requirements.txt (line 3))
-  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
-Collecting pydantic-core==2.46.5 (from pydantic==2.*->-r backend\requirements.txt (line 3))
-  Using cached pydantic_core-2.46.5-cp314-cp314-win_amd64.whl.metadata (6.7 kB)
-Collecting typing-inspection>=0.4.2 (from pydantic==2.*->-r backend\requirements.txt (line 3))
-  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
-Collecting lxml>=3.1.0 (from python-docx==1.2.*->-r backend\requirements.txt (line 4))
-  Using cached lxml-6.1.3-cp314-cp314-win_amd64.whl.metadata (3.4 kB)
-Collecting anyio<5,>=3.6.2 (from starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1))
-  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
-Collecting idna>=2.8 (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1))
-  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
-Collecting colorama>=0.4 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
-Collecting httptools>=0.5.0 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached httptools-0.8.0-cp314-cp314-win_amd64.whl.metadata (3.7 kB)
-Collecting pyyaml>=5.1 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached pyyaml-6.0.3-cp314-cp314-win_amd64.whl.metadata (2.4 kB)
-Collecting watchfiles>=0.13 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
-Collecting websockets>=10.4 (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2))
-  Using cached websockets-17.1-cp314-cp314-win_amd64.whl.metadata (6.5 kB)
-Collecting altgraph (from pyinstaller)
-  Using cached altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
-Collecting packaging>=22.0 (from pyinstaller)
-  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
-Collecting pefile>=2022.5.30 (from pyinstaller)
-  Using cached pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
-Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller)
-  Using cached pyinstaller_hooks_contrib-2026.7-py3-none-any.whl.metadata (16 kB)
-Collecting pywin32-ctypes>=0.2.1 (from pyinstaller)
-  Using cached pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
-Collecting setuptools>=42.0.0 (from pyinstaller)
-  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
-Collecting docstring-parser<1,>=0.15 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
-Collecting httpx2<3,>=2.0.0 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached httpx2-2.13.0-py3-none-any.whl.metadata (10 kB)
-Collecting jiter<1,>=0.4.0 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached jiter-0.17.0-cp314-cp314-win_amd64.whl.metadata (5.3 kB)
-Collecting sniffio<2,>=1 (from anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
-Collecting httpcore2==2.13.0 (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached httpcore2-2.13.0-py3-none-any.whl.metadata (26 kB)
-Collecting truststore>=0.10 (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5))
-  Using cached truststore-0.10.4-py3-none-any.whl.metadata (4.4 kB)
-Collecting requests (from tavily-python>=0.5->-r backend\requirements.txt (line 6))
-  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
-Collecting tiktoken>=0.5.1 (from tavily-python>=0.5->-r backend\requirements.txt (line 6))
-  Using cached tiktoken-0.14.0-cp314-cp314-win_amd64.whl.metadata (6.8 kB)
-Collecting certifi (from httpx>=0.27->-r backend\requirements.txt (line 7))
-  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
-Collecting httpcore==1.* (from httpx>=0.27->-r backend\requirements.txt (line 7))
-  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
-Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.12->-r backend\requirements.txt (line 8))
-  Using cached soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
-Collecting regex (from tiktoken>=0.5.1->tavily-python>=0.5->-r backend\requirements.txt (line 6))
-  Using cached regex-2026.9.10-cp314-cp314-win_amd64.whl.metadata (41 kB)
-Collecting charset_normalizer<4,>=2 (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6))
-  Using cached charset_normalizer-3.5.1-cp314-cp314-win_amd64.whl.metadata (46 kB)
-Collecting urllib3<3,>=1.26 (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6))
-  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
-Using cached fastapi-0.115.14-py3-none-any.whl (95 kB)
-Using cached uvicorn-0.30.6-py3-none-any.whl (62 kB)
-Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
-Using cached pydantic_core-2.46.5-cp314-cp314-win_amd64.whl (2.0 MB)
-Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
-Using cached starlette-0.46.2-py3-none-any.whl (72 kB)
-Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
-Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
-Downloading anthropic-1.8.0-py3-none-any.whl (1.3 MB)
-   ---------------------------------------- 1.3/1.3 MB 1.2 MB/s  0:00:01
-Using cached docstring_parser-0.18.0-py3-none-any.whl (22 kB)
-Using cached httpx2-2.13.0-py3-none-any.whl (95 kB)
-Using cached httpcore2-2.13.0-py3-none-any.whl (83 kB)
-Using cached jiter-0.17.0-cp314-cp314-win_amd64.whl (227 kB)
-Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
-Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
-Using cached tavily_python-0.8.4-py3-none-any.whl (24 kB)
-Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
-Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
-Using cached beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
-Using cached python_dotenv-1.2.3-py3-none-any.whl (22 kB)
-Using cached python_multipart-0.0.32-py3-none-any.whl (30 kB)
-Using cached pymupdf-1.28.2-cp310-abi3-win_amd64.whl (19.8 MB)
-Using cached pywin32-312-cp314-cp314-win_amd64.whl (7.0 MB)
-Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
-Using cached click-8.5.0-py3-none-any.whl (125 kB)
-Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
-Using cached h11-0.16.0-py3-none-any.whl (37 kB)
-Using cached httptools-0.8.0-cp314-cp314-win_amd64.whl (92 kB)
-Using cached idna-3.20-py3-none-any.whl (69 kB)
-Using cached lxml-6.1.3-cp314-cp314-win_amd64.whl (4.1 MB)
-Using cached packaging-26.3-py3-none-any.whl (129 kB)
-Using cached pefile-2024.8.26-py3-none-any.whl (74 kB)
-Using cached pyinstaller_hooks_contrib-2026.7-py3-none-any.whl (459 kB)
-Using cached pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
-Using cached pyyaml-6.0.3-cp314-cp314-win_amd64.whl (156 kB)
-Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
-Using cached soupsieve-2.9.2-py3-none-any.whl (37 kB)
-Using cached tiktoken-0.14.0-cp314-cp314-win_amd64.whl (988 kB)
-Using cached truststore-0.10.4-py3-none-any.whl (18 kB)
-Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
-Using cached watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
-Using cached websockets-17.1-cp314-cp314-win_amd64.whl (217 kB)
-Using cached altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
-Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
-Using cached regex-2026.9.10-cp314-cp314-win_amd64.whl (281 kB)
-Using cached requests-2.34.2-py3-none-any.whl (73 kB)
-Using cached charset_normalizer-3.5.1-cp314-cp314-win_amd64.whl (204 kB)
-Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
-Installing collected packages: altgraph, websockets, urllib3, typing-extensions, truststore, soupsieve, sniffio, setuptools, regex, pyyaml, pywin32-ctypes, pywin32, python-multipart, python-dotenv, pymupdf, pefile, packaging, lxml, jiter, idna, httptools, h11, docstring-parser, colorama, click, charset_normalizer, certifi, annotated-types, uvicorn, typing-inspection, requests, python-docx, pyinstaller-hooks-contrib, pydantic-core, httpcore2, httpcore, beautifulsoup4, anyio, watchfiles, tiktoken, starlette, pyinstaller, pydantic, httpx2, httpx, tavily-python, fastapi, anthropic
-
-Successfully installed altgraph-0.17.5 annotated-types-0.8.0 anthropic-1.8.0 anyio-4.15.1 beautifulsoup4-4.15.0 certifi-2026.7.22 charset_normalizer-3.5.1 click-8.5.0 colorama-0.4.6 docstring-parser-0.18.0 fastapi-0.115.14 h11-0.16.0 httpcore-1.0.9 httpcore2-2.13.0 httptools-0.8.0 httpx-0.28.1 httpx2-2.13.0 idna-3.20 jiter-0.17.0 lxml-6.1.3 packaging-26.3 pefile-2024.8.26 pydantic-2.13.5 pydantic-core-2.46.5 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.7 pymupdf-1.28.2 python-docx-1.2.0 python-dotenv-1.2.3 python-multipart-0.0.32 pywin32-312 pywin32-ctypes-0.2.3 pyyaml-6.0.3 regex-2026.9.10 requests-2.34.2 setuptools-84.0.0 sniffio-1.3.1 soupsieve-2.9.2 starlette-0.46.2 tavily-python-0.8.4 tiktoken-0.14.0 truststore-0.10.4 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 uvicorn-0.30.6 watchfiles-1.3.0 websockets-17.1
-46 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
-216 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.7
-216 INFO: Python: 3.14.3
-238 INFO: Platform: Windows-11-10.0.26200-SP0
-238 INFO: Python environment: D:\Workspaces\resume-builder\backend\.venv
-240 INFO: Removing temporary files and cleaning cache in C:\Users\user\AppData\Local\pyinstaller
-1241 WARNING: Failed to collect submodules for 'anthropic._vendor.httpx_aiohttp' because importing 'anthropic._vendor.httpx_aiohttp' raised: ModuleNotFoundError: No module named 'aiohttp'
-3781 INFO: Module search paths (PYTHONPATH):
+[32m✓ built in 607ms[39m
+Requirement already satisfied: pip in .\backend\.venv\Lib\site-packages (26.2.1)
+Requirement already satisfied: pyinstaller in .\backend\.venv\Lib\site-packages (6.22.3)
+Requirement already satisfied: fastapi==0.115.* in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 1)) (0.115.14)
+Requirement already satisfied: uvicorn==0.30.* in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (0.30.6)
+Requirement already satisfied: pydantic==2.* in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 3)) (2.13.5)
+Requirement already satisfied: python-docx==1.2.* in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 4)) (1.2.0)
+Requirement already satisfied: anthropic>=0.60 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 5)) (1.8.0)
+Requirement already satisfied: tavily-python>=0.5 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 6)) (0.8.4)
+Requirement already satisfied: httpx>=0.27 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 7)) (0.28.1)
+Requirement already satisfied: beautifulsoup4>=4.12 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 8)) (4.15.0)
+Requirement already satisfied: python-dotenv>=1.0 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 9)) (1.2.3)
+Requirement already satisfied: python-multipart>=0.0.9 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 10)) (0.0.32)
+Requirement already satisfied: pymupdf>=1.24 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 11)) (1.28.2)
+Requirement already satisfied: pywin32>=306 in .\backend\.venv\Lib\site-packages (from -r backend\requirements.txt (line 12)) (312)
+Requirement already satisfied: starlette<0.47.0,>=0.40.0 in .\backend\.venv\Lib\site-packages (from fastapi==0.115.*->-r backend\requirements.txt (line 1)) (0.46.2)
+Requirement already satisfied: typing-extensions>=4.8.0 in .\backend\.venv\Lib\site-packages (from fastapi==0.115.*->-r backend\requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: click>=7.0 in .\backend\.venv\Lib\site-packages (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (8.5.0)
+Requirement already satisfied: h11>=0.8 in .\backend\.venv\Lib\site-packages (from uvicorn==0.30.*->uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in .\backend\.venv\Lib\site-packages (from pydantic==2.*->-r backend\requirements.txt (line 3)) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in .\backend\.venv\Lib\site-packages (from pydantic==2.*->-r backend\requirements.txt (line 3)) (2.46.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\backend\.venv\Lib\site-packages (from pydantic==2.*->-r backend\requirements.txt (line 3)) (0.4.4)
+Requirement already satisfied: lxml>=3.1.0 in .\backend\.venv\Lib\site-packages (from python-docx==1.2.*->-r backend\requirements.txt (line 4)) (6.1.3)
+Requirement already satisfied: anyio<5,>=3.6.2 in .\backend\.venv\Lib\site-packages (from starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1)) (4.15.1)
+Requirement already satisfied: idna>=2.8 in .\backend\.venv\Lib\site-packages (from anyio<5,>=3.6.2->starlette<0.47.0,>=0.40.0->fastapi==0.115.*->-r backend\requirements.txt (line 1)) (3.20)
+Requirement already satisfied: colorama>=0.4 in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: httptools>=0.5.0 in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (0.8.0)
+Requirement already satisfied: pyyaml>=5.1 in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (6.0.3)
+Requirement already satisfied: watchfiles>=0.13 in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (1.3.0)
+Requirement already satisfied: websockets>=10.4 in .\backend\.venv\Lib\site-packages (from uvicorn[standard]==0.30.*->-r backend\requirements.txt (line 2)) (17.1)
+Requirement already satisfied: altgraph in .\backend\.venv\Lib\site-packages (from pyinstaller) (0.17.5)
+Requirement already satisfied: packaging>=22.0 in .\backend\.venv\Lib\site-packages (from pyinstaller) (26.3)
+Requirement already satisfied: pefile>=2022.5.30 in .\backend\.venv\Lib\site-packages (from pyinstaller) (2024.8.26)
+Requirement already satisfied: pyinstaller-hooks-contrib>=2026.7 in .\backend\.venv\Lib\site-packages (from pyinstaller) (2026.7)
+Requirement already satisfied: pywin32-ctypes>=0.2.1 in .\backend\.venv\Lib\site-packages (from pyinstaller) (0.2.3)
+Requirement already satisfied: setuptools>=42.0.0 in .\backend\.venv\Lib\site-packages (from pyinstaller) (84.0.0)
+Requirement already satisfied: docstring-parser<1,>=0.15 in .\backend\.venv\Lib\site-packages (from anthropic>=0.60->-r backend\requirements.txt (line 5)) (0.18.0)
+Requirement already satisfied: httpx2<3,>=2.0.0 in .\backend\.venv\Lib\site-packages (from anthropic>=0.60->-r backend\requirements.txt (line 5)) (2.13.0)
+Requirement already satisfied: jiter<1,>=0.4.0 in .\backend\.venv\Lib\site-packages (from anthropic>=0.60->-r backend\requirements.txt (line 5)) (0.17.0)
+Requirement already satisfied: sniffio<2,>=1 in .\backend\.venv\Lib\site-packages (from anthropic>=0.60->-r backend\requirements.txt (line 5)) (1.3.1)
+Requirement already satisfied: httpcore2==2.13.0 in .\backend\.venv\Lib\site-packages (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5)) (2.13.0)
+Requirement already satisfied: truststore>=0.10 in .\backend\.venv\Lib\site-packages (from httpx2<3,>=2.0.0->anthropic>=0.60->-r backend\requirements.txt (line 5)) (0.10.4)
+Requirement already satisfied: requests in .\backend\.venv\Lib\site-packages (from tavily-python>=0.5->-r backend\requirements.txt (line 6)) (2.34.2)
+Requirement already satisfied: tiktoken>=0.5.1 in .\backend\.venv\Lib\site-packages (from tavily-python>=0.5->-r backend\requirements.txt (line 6)) (0.14.0)
+Requirement already satisfied: certifi in .\backend\.venv\Lib\site-packages (from httpx>=0.27->-r backend\requirements.txt (line 7)) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\backend\.venv\Lib\site-packages (from httpx>=0.27->-r backend\requirements.txt (line 7)) (1.0.9)
+Requirement already satisfied: soupsieve>=1.6.1 in .\backend\.venv\Lib\site-packages (from beautifulsoup4>=4.12->-r backend\requirements.txt (line 8)) (2.9.2)
+Requirement already satisfied: regex in .\backend\.venv\Lib\site-packages (from tiktoken>=0.5.1->tavily-python>=0.5->-r backend\requirements.txt (line 6)) (2026.9.10)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\backend\.venv\Lib\site-packages (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6)) (3.5.1)
+Requirement already satisfied: urllib3<3,>=1.26 in .\backend\.venv\Lib\site-packages (from requests->tavily-python>=0.5->-r backend\requirements.txt (line 6)) (2.8.0)
+38 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
+190 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.7
+191 INFO: Python: 3.14.3
+206 INFO: Platform: Windows-11-10.0.26200-SP0
+207 INFO: Python environment: D:\Workspaces\resume-builder\backend\.venv
+209 INFO: Removing temporary files and cleaning cache in C:\Users\user\AppData\Local\pyinstaller
+1779 WARNING: Failed to collect submodules for 'anthropic._vendor.httpx_aiohttp' because importing 'anthropic._vendor.httpx_aiohttp' raised: ModuleNotFoundError: No module named 'aiohttp'
+4273 INFO: Module search paths (PYTHONPATH):
 ['D:\\Workspaces\\resume-builder\\backend',
  'C:\\Python314\\python314.zip',
  'C:\\Python314\\DLLs',
@@ -191,133 +82,133 @@ Successfully installed altgraph-0.17.5 annotated-types-0.8.0 anthropic-1.8.0 any
  'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\win32\\lib',
  'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\pythonwin',
  'D:\\Workspaces\\resume-builder\\backend']
-3998 INFO: Appending 'datas' from .spec
-3999 INFO: checking Analysis
-3999 INFO: Building Analysis because Analysis-00.toc is non existent
-3999 INFO: Looking for Python shared library...
-3999 INFO: Using Python shared library: C:\Python314\python314.dll
-3999 INFO: Running Analysis Analysis-00.toc
-3999 INFO: Target bytecode optimization level: 0
-3999 INFO: Initializing module dependency graph...
-4007 INFO: Initializing module graph hook caches...
-4026 INFO: Analyzing modules for base_library.zip ...
-5050 INFO: Processing standard module hook 'hook-math.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-6198 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-6697 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-7129 INFO: Processing standard module hook 'hook-difflib.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-7186 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-12171 INFO: Caching module dependency graph...
-12204 INFO: Analyzing D:\Workspaces\resume-builder\backend\desktop.py
-12247 INFO: Processing standard module hook 'hook-webbrowser.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-12333 INFO: Processing standard module hook 'hook-sysconfig.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-12346 INFO: Processing standard module hook 'hook-_ctypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-12357 INFO: Processing standard module hook 'hook-uvicorn.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-12834 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-12968 INFO: Processing standard module hook 'hook-xml.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-14898 INFO: Processing standard module hook 'hook-platform.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-14944 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-14945 INFO: SetuptoolsInfo: initializing cached setuptools info...
-16166 INFO: Processing standard module hook 'hook-websockets.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-16731 INFO: Processing standard module hook 'hook-anyio.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-17727 INFO: Processing standard module hook 'hook-pydantic.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-18394 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-19665 INFO: Processing standard module hook 'hook-docx.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-19727 INFO: Processing standard module hook 'hook-lxml.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20017 INFO: Processing standard module hook 'hook-lxml.etree.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20570 INFO: Processing standard module hook 'hook-urllib3.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20657 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-20657 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
-20662 INFO: Processing standard module hook 'hook-setuptools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-20672 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-20694 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-20695 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
-20703 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-20703 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
-20946 INFO: Processing standard module hook 'hook-_osx_support.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-20960 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-21275 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-21276 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-21778 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-21778 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
-22219 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-22220 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
-22517 INFO: Processing standard module hook 'hook-certifi.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-22556 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-28178 INFO: Processing standard module hook 'hook-regex.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-28407 INFO: Processing standard module hook 'hook-pythoncom.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-28538 INFO: Processing standard module hook 'hook-pywintypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-28615 INFO: Processing pre-safe-import-module hook 'hook-win32com.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
-28772 INFO: Processing standard module hook 'hook-win32com.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-31973 INFO: Analyzing hidden import 'uvicorn.__main__'
-31974 INFO: Analyzing hidden import 'uvicorn.lifespan'
-31974 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
-31975 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
-31980 INFO: Analyzing hidden import 'uvicorn.loops'
-31980 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
-31981 INFO: Analyzing hidden import 'uvicorn.loops.auto'
-31983 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
-31983 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
-31984 INFO: Analyzing hidden import 'uvicorn.workers'
-31988 INFO: Analyzing hidden import 'anthropic.lib.bedrock._stream'
-31989 INFO: Analyzing hidden import 'anthropic.lib.sessions'
-31993 INFO: Analyzing hidden import 'anthropic.lib.tools.mcp'
-32012 INFO: Analyzing hidden import 'anthropic.tools'
-32013 INFO: Analyzing hidden import 'anthropic.types.beta.agents'
-32017 INFO: Analyzing hidden import 'anthropic.types.beta.sessions.threads'
-32020 INFO: Analyzing hidden import 'pydantic.alias_generators'
-32021 INFO: Analyzing hidden import 'pydantic.decorator'
-32022 INFO: Analyzing hidden import 'pydantic.deprecated.decorator'
-32033 INFO: Analyzing hidden import 'pydantic.env_settings'
-32034 INFO: Analyzing hidden import 'pydantic.experimental'
-32034 INFO: Analyzing hidden import 'pydantic.experimental.arguments_schema'
-32039 INFO: Analyzing hidden import 'pydantic.experimental.missing_sentinel'
-32041 INFO: Analyzing hidden import 'pydantic.experimental.pipeline'
-32070 INFO: Analyzing hidden import 'pydantic.json'
-32070 INFO: Analyzing hidden import 'pydantic.mypy'
-32110 INFO: Analyzing hidden import 'pydantic.parse'
-32110 INFO: Analyzing hidden import 'pydantic.tools'
-32111 INFO: Analyzing hidden import 'pydantic.v1._hypothesis_plugin'
-32136 INFO: Analyzing hidden import 'pydantic.v1.generics'
-32151 INFO: Analyzing hidden import 'pydantic.v1.mypy'
-32187 INFO: Analyzing hidden import 'pydantic.validators'
-32188 INFO: Analyzing hidden import 'fitz'
-32190 INFO: Processing module hooks (post-graph stage)...
-33647 INFO: Processing standard module hook 'hook-lxml.isoschematron.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-34056 WARNING: Hidden import "tzdata" not found!
-34636 INFO: Processing standard module hook 'hook-lxml.objectify.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-34654 INFO: Performing binary vs. data reclassification (57 entries)
-35053 INFO: Looking for ctypes DLLs
-35087 INFO: Analyzing run-time hooks ...
-35094 INFO: Including run-time hook 'pyi_rth_pywintypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
-35096 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-35098 INFO: Including run-time hook 'pyi_rth_pythoncom.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
-35099 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-35101 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-35103 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-35127 INFO: Creating base_library.zip...
-35143 INFO: Looking for dynamic libraries
+4474 INFO: Appending 'datas' from .spec
+4475 INFO: checking Analysis
+4475 INFO: Building Analysis because Analysis-00.toc is non existent
+4475 INFO: Looking for Python shared library...
+4475 INFO: Using Python shared library: C:\Python314\python314.dll
+4475 INFO: Running Analysis Analysis-00.toc
+4475 INFO: Target bytecode optimization level: 0
+4475 INFO: Initializing module dependency graph...
+4510 INFO: Initializing module graph hook caches...
+4536 INFO: Analyzing modules for base_library.zip ...
+5866 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6334 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6604 INFO: Processing standard module hook 'hook-math.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6754 INFO: Processing standard module hook 'hook-difflib.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6775 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10528 INFO: Caching module dependency graph...
+10551 INFO: Analyzing D:\Workspaces\resume-builder\backend\desktop.py
+10578 INFO: Processing standard module hook 'hook-webbrowser.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10646 INFO: Processing standard module hook 'hook-sysconfig.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10657 INFO: Processing standard module hook 'hook-_ctypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10670 INFO: Processing standard module hook 'hook-uvicorn.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+11206 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+11343 INFO: Processing standard module hook 'hook-xml.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13049 INFO: Processing standard module hook 'hook-platform.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13112 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13115 INFO: SetuptoolsInfo: initializing cached setuptools info...
+14873 INFO: Processing standard module hook 'hook-websockets.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+15951 INFO: Processing standard module hook 'hook-anyio.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+17439 INFO: Processing standard module hook 'hook-pydantic.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+18367 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20917 INFO: Processing standard module hook 'hook-docx.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+21145 INFO: Processing standard module hook 'hook-lxml.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+21427 INFO: Processing standard module hook 'hook-lxml.etree.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+22943 INFO: Processing standard module hook 'hook-urllib3.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+23120 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+23120 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+23132 INFO: Processing standard module hook 'hook-setuptools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+23194 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+23303 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+23304 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+23321 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+23322 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+23706 INFO: Processing standard module hook 'hook-_osx_support.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+23744 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+24267 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+24268 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+25499 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+25499 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+26450 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+26451 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+27147 INFO: Processing standard module hook 'hook-certifi.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+27261 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+42970 INFO: Processing standard module hook 'hook-regex.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+43246 INFO: Processing standard module hook 'hook-pythoncom.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+43416 INFO: Processing standard module hook 'hook-pywintypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+43484 INFO: Processing pre-safe-import-module hook 'hook-win32com.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+43589 INFO: Processing standard module hook 'hook-win32com.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+46899 INFO: Analyzing hidden import 'uvicorn.__main__'
+46905 INFO: Analyzing hidden import 'uvicorn.lifespan'
+46905 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
+46910 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
+46943 INFO: Analyzing hidden import 'uvicorn.loops'
+46944 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
+46950 INFO: Analyzing hidden import 'uvicorn.loops.auto'
+46959 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
+46966 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
+46970 INFO: Analyzing hidden import 'uvicorn.workers'
+46993 INFO: Analyzing hidden import 'anthropic.lib.bedrock._stream'
+47007 INFO: Analyzing hidden import 'anthropic.lib.sessions'
+47023 INFO: Analyzing hidden import 'anthropic.lib.tools.mcp'
+47055 INFO: Analyzing hidden import 'anthropic.tools'
+47066 INFO: Analyzing hidden import 'anthropic.types.beta.agents'
+47086 INFO: Analyzing hidden import 'anthropic.types.beta.sessions.threads'
+47112 INFO: Analyzing hidden import 'pydantic.alias_generators'
+47127 INFO: Analyzing hidden import 'pydantic.decorator'
+47133 INFO: Analyzing hidden import 'pydantic.deprecated.decorator'
+47153 INFO: Analyzing hidden import 'pydantic.env_settings'
+47161 INFO: Analyzing hidden import 'pydantic.experimental'
+47167 INFO: Analyzing hidden import 'pydantic.experimental.arguments_schema'
+47176 INFO: Analyzing hidden import 'pydantic.experimental.missing_sentinel'
+47182 INFO: Analyzing hidden import 'pydantic.experimental.pipeline'
+47216 INFO: Analyzing hidden import 'pydantic.json'
+47222 INFO: Analyzing hidden import 'pydantic.mypy'
+47267 INFO: Analyzing hidden import 'pydantic.parse'
+47273 INFO: Analyzing hidden import 'pydantic.tools'
+47278 INFO: Analyzing hidden import 'pydantic.v1._hypothesis_plugin'
+47300 INFO: Analyzing hidden import 'pydantic.v1.generics'
+47320 INFO: Analyzing hidden import 'pydantic.v1.mypy'
+47363 INFO: Analyzing hidden import 'pydantic.validators'
+47370 INFO: Analyzing hidden import 'fitz'
+47375 INFO: Processing module hooks (post-graph stage)...
+48717 INFO: Processing standard module hook 'hook-lxml.isoschematron.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+49306 WARNING: Hidden import "tzdata" not found!
+49821 INFO: Processing standard module hook 'hook-lxml.objectify.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+49836 INFO: Performing binary vs. data reclassification (57 entries)
+50325 INFO: Looking for ctypes DLLs
+50360 INFO: Analyzing run-time hooks ...
+50367 INFO: Including run-time hook 'pyi_rth_pywintypes.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+50379 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+50398 INFO: Including run-time hook 'pyi_rth_pythoncom.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+50401 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+50409 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+50419 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'D:\\Workspaces\\resume-builder\\backend\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+50447 INFO: Creating base_library.zip...
+50460 INFO: Looking for dynamic libraries
 warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
-37313 INFO: Extra DLL search directories (AddDllDirectory): []
-37313 INFO: Extra DLL search directories (PATH): []
-38311 INFO: Warnings written to D:\Workspaces\resume-builder\backend\build\resume_builder\warn-resume_builder.txt
-38532 INFO: Graph cross-reference written to D:\Workspaces\resume-builder\backend\build\resume_builder\xref-resume_builder.html
-38598 INFO: checking PYZ
-38598 INFO: Building PYZ because PYZ-00.toc is non existent
-38598 INFO: Building PYZ (ZlibArchive) D:\Workspaces\resume-builder\backend\build\resume_builder\PYZ-00.pyz
-39576 INFO: Building PYZ (ZlibArchive) D:\Workspaces\resume-builder\backend\build\resume_builder\PYZ-00.pyz completed successfully.
-39694 INFO: checking PKG
-39694 INFO: Building PKG because PKG-00.toc is non existent
-39694 INFO: Building PKG (CArchive) ResumeBuilder.pkg
-43540 INFO: Building PKG (CArchive) ResumeBuilder.pkg completed successfully.
-43543 INFO: Bootloader D:\Workspaces\resume-builder\backend\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
-43543 INFO: checking EXE
-43543 INFO: Building EXE because EXE-00.toc is non existent
-43543 INFO: Building EXE from EXE-00.toc
-43558 INFO: Copying bootloader EXE to D:\Workspaces\resume-builder\backend\dist\ResumeBuilder.exe
-43639 INFO: Copying icon to EXE
-43680 INFO: Copying 0 resources to EXE
-43680 INFO: Embedding manifest in EXE
-43709 INFO: Appending PKG archive to EXE
-43809 INFO: Fixing EXE headers
-44545 INFO: Building EXE from EXE-00.toc completed successfully.
-44549 INFO: Build complete! The results are available in: D:\Workspaces\resume-builder\backend\dist
+53345 INFO: Extra DLL search directories (AddDllDirectory): []
+53345 INFO: Extra DLL search directories (PATH): []
+54254 INFO: Warnings written to D:\Workspaces\resume-builder\backend\build\resume_builder\warn-resume_builder.txt
+54400 INFO: Graph cross-reference written to D:\Workspaces\resume-builder\backend\build\resume_builder\xref-resume_builder.html
+54523 INFO: checking PYZ
+54523 INFO: Building PYZ because PYZ-00.toc is non existent
+54523 INFO: Building PYZ (ZlibArchive) D:\Workspaces\resume-builder\backend\build\resume_builder\PYZ-00.pyz
+55538 INFO: Building PYZ (ZlibArchive) D:\Workspaces\resume-builder\backend\build\resume_builder\PYZ-00.pyz completed successfully.
+55583 INFO: checking PKG
+55583 INFO: Building PKG because PKG-00.toc is non existent
+55583 INFO: Building PKG (CArchive) ResumeBuilder.pkg
+59897 INFO: Building PKG (CArchive) ResumeBuilder.pkg completed successfully.
+59900 INFO: Bootloader D:\Workspaces\resume-builder\backend\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+59900 INFO: checking EXE
+59900 INFO: Building EXE because EXE-00.toc is non existent
+59900 INFO: Building EXE from EXE-00.toc
+59900 INFO: Copying bootloader EXE to D:\Workspaces\resume-builder\backend\dist\ResumeBuilder.exe
+59990 INFO: Copying icon to EXE
+60028 INFO: Copying 0 resources to EXE
+60029 INFO: Embedding manifest in EXE
+60062 INFO: Appending PKG archive to EXE
+60128 INFO: Fixing EXE headers
+61092 INFO: Building EXE from EXE-00.toc completed successfully.
+61095 INFO: Build complete! The results are available in: D:\Workspaces\resume-builder\backend\dist
